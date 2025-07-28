@@ -1,0 +1,31 @@
+#rect-anim {
+
+    .container {
+        position: relative;
+    }
+
+    svg {
+        width: 500px;
+        height: 430px;
+    }
+
+    rect {
+        transition: all 2s ease-in-out;
+    }
+
+    #rect1 {
+        transform-origin: 95px 130px;
+    }
+
+    #rect2 {
+        transform-origin: 335px 130px;
+    }
+
+    #rect3 {
+        transform-origin: 95px 335px;
+    }
+
+    #rect4 {
+        transform-origin: 335px 335px;
+    }
+}
