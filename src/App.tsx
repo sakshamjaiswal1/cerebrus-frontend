@@ -9,6 +9,7 @@ import HowToUse from "./pages/HowToUse";
 import WhatsNew from "./pages/WhatsNew";
 import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
+import ApplicationUI from "./pages/ApplicationUI";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <ContactUs />,
+  },
+  {
+    path: "/application-ui",
+    element: <ApplicationUI />,
   },
 ]);
 function App() {
