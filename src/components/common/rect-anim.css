@@ -5,8 +5,8 @@
     }
 
     svg {
-        width: 500px;
-        height: 430px;
+        width: 750px;
+        height: 645px;
     }
 
     rect {
@@ -14,18 +14,18 @@
     }
 
     #rect1 {
-        transform-origin: 95px 130px;
+        transform-origin: 142.5px 195px;
     }
 
     #rect2 {
-        transform-origin: 335px 130px;
+        transform-origin: 502.5px 195px;
     }
 
     #rect3 {
-        transform-origin: 95px 335px;
+        transform-origin: 142.5px 502.5px;
     }
 
     #rect4 {
-        transform-origin: 335px 335px;
+        transform-origin: 502.5px 502.5px;
     }
 }

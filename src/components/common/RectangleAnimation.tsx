@@ -20,8 +20,8 @@ const RectangleAnimation = () => {
             } else {
                 // Animate to merged state
                 rect1.style.transform = 'scaleX(0.6)';
-                rect2.style.transform = 'scaleX(0.8) translate(-70px, 10px)';
-                rect3.style.transform = 'scaleX(0.8) translate(70px, -10px)';
+                rect2.style.transform = 'scaleX(0.8) translate(-105px, 15px)';
+                rect3.style.transform = 'scaleX(0.8) translate(105px, -15px)';
                 rect4.style.transform = 'scaleX(0.6)';
             }
             isMerged = !isMerged;
@@ -30,7 +30,7 @@ const RectangleAnimation = () => {
         setInterval(animate, 2000);
     }, [])
     return (
-        <div id="rect-anim">
+        <div className="scale-[0.9]" id="rect-anim">
             <div className="container">
                 <svg className="goo">
                     <defs>
@@ -41,12 +41,12 @@ const RectangleAnimation = () => {
                         </filter>
                     </defs>
                     <g>
-                        <rect id="rect1" x="20" y="20" width="150" height="220" fill="black" rx="20" ry="20" />
-                        <rect id="rect4" x="190" y="260" width="290" height="150" fill="black" rx="20" ry="20" />
+                        <rect id="rect1" x="30" y="30" width="225" height="330" fill="black" rx="30" ry="30" />
+                        <rect id="rect4" x="285" y="390" width="435" height="225" fill="black" rx="30" ry="30" />
                     </g>
                     <g filter="url(#goo)">
-                        <rect id="rect2" x="190" y="20" width="290" height="220" fill="black" rx="20" ry="20" />
-                        <rect id="rect3" x="20" y="260" width="150" height="150" fill="black" rx="20" ry="20" />
+                        <rect id="rect2" x="285" y="30" width="435" height="330" fill="black" rx="30" ry="30" />
+                        <rect id="rect3" x="30" y="390" width="225" height="225" fill="black" rx="30" ry="30" />
                     </g>
                 </svg>
             </div>
