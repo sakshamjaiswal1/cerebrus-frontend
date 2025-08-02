@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Features from "./pages/Features";
 import HowToUse from "./pages/HowToUse";
 import WhatsNew from "./pages/WhatsNew";
+import Blog from "./pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/whats-new",
     element: <WhatsNew />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
   },
 ]);
 function App() {
