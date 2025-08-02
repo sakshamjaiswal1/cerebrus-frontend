@@ -73,15 +73,15 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
                                             <GradientTextSmall text="How to use" />
                                         </span>
                                     </Link>
-                                    <a
-                                        href="#"
-                                        className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
-                                    >
-                                        <span className="text-primary group-hover/item:hidden">Whats new</span>
-                                        <span className="hidden group-hover/item:block">
-                                            <GradientTextSmall text="Whats new" />
-                                        </span>
-                                    </a>
+                                                                                    <Link 
+                                                    to="/whats-new" 
+                                                    className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
+                                                >
+                                                    <span className="text-primary group-hover/item:hidden">Whats new</span>
+                                                    <span className="hidden group-hover/item:block">
+                                                        <GradientTextSmall text="Whats new" />
+                                                    </span>
+                                                </Link>
                                     <a
                                         href="#"
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"

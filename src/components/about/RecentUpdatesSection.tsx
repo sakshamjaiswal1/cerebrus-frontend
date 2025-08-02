@@ -54,7 +54,7 @@ const RecentUpdatesSection = () => {
         <SwipeableCarousel 
           items={updatesData}
           cardBackground="bg-brand-bg"
-          autoPlayInterval={6000}
+          autoPlayInterval={1000}
           showButton={true}
           className="w-full"
         />
