@@ -10,6 +10,7 @@ import WhatsNew from "./pages/WhatsNew";
 import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
 import ApplicationUI from "./pages/ApplicationUI";
+import Customization from "./pages/Customization";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/application-ui",
     element: <ApplicationUI />,
+  },
+  {
+    path: "/customization",
+    element: <Customization />,
   },
 ]);
 function App() {
