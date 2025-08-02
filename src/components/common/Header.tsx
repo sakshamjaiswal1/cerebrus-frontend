@@ -61,18 +61,18 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
                                 </svg>
                             </button>
 
-                            {/* Dropdown Menu */}
+                                                        {/* Dropdown Menu */}
                             <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                 <div className="py-2">
-                                    <a
-                                        href="#"
+                                    <Link 
+                                        to="/how-to-use" 
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
                                     >
                                         <span className="text-primary group-hover/item:hidden">How to use</span>
                                         <span className="hidden group-hover/item:block">
                                             <GradientTextSmall text="How to use" />
                                         </span>
-                                    </a>
+                                    </Link>
                                     <a
                                         href="#"
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
