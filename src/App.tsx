@@ -8,6 +8,7 @@ import Features from "./pages/Features";
 import HowToUse from "./pages/HowToUse";
 import WhatsNew from "./pages/WhatsNew";
 import Blog from "./pages/Blog";
+import ContactUs from "./pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/blog",
     element: <Blog />,
+  },
+  {
+    path: "/contact",
+    element: <ContactUs />,
   },
 ]);
 function App() {
