@@ -2,7 +2,7 @@ import AnimatedButton from "./AnimatedButton"
 import DarkAnimatedButton from "./DarkAnimatedButton"
 import GradientTextSmall from "./GradientTextSmall"
 
-const Header = () => {
+const Header = ({ isHome = false }: { isHome: boolean }) => {
     return (
         <header className="w-full">
             <div className="flex items-center justify-between">
@@ -15,7 +15,7 @@ const Header = () => {
                     />
                 </div>
 
-                <div className="flex w-11/12 justify-end bg-brand-bg p-4 py-6 rounded-t-xl">
+                <div className={`flex w-11/12 justify-end p-4 py-6 ${isHome ? 'rounded-t-xl bg-brand-bg' : ''}`}>
 
                     {/* Navigation Menu */}
                     <nav className="flex items-center justify-end pr-12 w-3/4 space-x-8">
@@ -57,12 +57,12 @@ const Header = () => {
                                     />
                                 </svg>
                             </button>
-                            
+
                             {/* Dropdown Menu */}
                             <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                 <div className="py-2">
-                                    <a 
-                                        href="#" 
+                                    <a
+                                        href="#"
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
                                     >
                                         <span className="text-primary group-hover/item:hidden">How to use</span>
@@ -70,8 +70,8 @@ const Header = () => {
                                             <GradientTextSmall text="How to use" />
                                         </span>
                                     </a>
-                                    <a 
-                                        href="#" 
+                                    <a
+                                        href="#"
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
                                     >
                                         <span className="text-primary group-hover/item:hidden">Whats new</span>
@@ -79,8 +79,8 @@ const Header = () => {
                                             <GradientTextSmall text="Whats new" />
                                         </span>
                                     </a>
-                                    <a 
-                                        href="#" 
+                                    <a
+                                        href="#"
                                         className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
                                     >
                                         <span className="text-primary group-hover/item:hidden">Blog</span>
@@ -99,7 +99,7 @@ const Header = () => {
                         <DarkAnimatedButton text="Get Started" />
 
                         {/* Login Button */}
-                      <AnimatedButton text="Login" />
+                        <AnimatedButton text="Login" />
                     </div>
                 </div>
             </div>
