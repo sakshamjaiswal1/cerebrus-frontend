@@ -4,6 +4,7 @@ import {
 } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Features from "./pages/Features";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/features",
+    element: <Features />,
   },
 ]);
 function App() {

@@ -1,38 +1,41 @@
 import AnimatedButton from "./AnimatedButton"
 import DarkAnimatedButton from "./DarkAnimatedButton"
 import GradientTextSmall from "./GradientTextSmall"
+import { Link } from "react-router"
 
-const Header = ({ isHome = false }: { isHome: boolean }) => {
+const Header = ({ isHome = false }: { isHome?: boolean }) => {
     return (
         <header className="w-full">
             <div className="flex items-center justify-between">
                 {/* Logo Section */}
                 <div className="flex items-center bg-white rounded-xl p-2 w-1/12 h-full">
-                    <img
-                        src="/Cerebrus_Logo.svg"
-                        alt="Cerebrus"
-                        className="h-full w-full "
-                    />
+                    <Link to="/">
+                        <img
+                            src="/Cerebrus_Logo.svg"
+                            alt="Cerebrus"
+                            className="h-full w-full "
+                        />
+                    </Link>
                 </div>
 
                 <div className={`flex w-11/12 justify-end p-4 py-6 ${isHome ? 'rounded-t-xl bg-brand-bg' : ''}`}>
 
                     {/* Navigation Menu */}
                     <nav className="flex items-center justify-end pr-12 w-3/4 space-x-8">
-                        <a
-                            href="#"
+                        <Link
+                            to="/about"
                             className="text-base font-medium transition-colors duration-200 hover:opacity-70"
                             style={{ color: '#1A323C' }}
                         >
                             About
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            to="/features"
                             className="text-base font-medium transition-colors duration-200 hover:opacity-70"
                             style={{ color: '#1A323C' }}
                         >
                             Features
-                        </a>
+                        </Link>
                         <div className="relative group">
                             <button
                                 className="flex items-center space-x-1 text-base font-medium transition-colors duration-200 hover:opacity-70"
