@@ -12,6 +12,7 @@ import ContactUs from "./pages/ContactUs";
 import ApplicationUI from "./pages/ApplicationUI";
 import Customization from "./pages/Customization";
 import MeetAHuman from "./pages/MeetAHuman";
+import Careers from "./pages/Careers";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
   {
     path: "/meet-a-human",
     element: <MeetAHuman />,
+  },
+  {
+    path: "/careers",
+    element: <Careers />,
   }
 ]);
 function App() {
