@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import ContactUs from "./pages/ContactUs";
 import ApplicationUI from "./pages/ApplicationUI";
 import Customization from "./pages/Customization";
+import MeetAHuman from "./pages/MeetAHuman";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
     path: "/customization",
     element: <Customization />,
   },
+  {
+    path: "/meet-a-human",
+    element: <MeetAHuman />,
+  }
 ]);
 function App() {
   return (
