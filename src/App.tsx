@@ -13,6 +13,7 @@ import ApplicationUI from "./pages/ApplicationUI";
 import Customization from "./pages/Customization";
 import MeetAHuman from "./pages/MeetAHuman";
 import Careers from "./pages/Careers";
+import Proctoring from "./pages/Proctoring";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/careers",
     element: <Careers />,
+  },
+  {
+    path: "/proctoring",
+    element: <Proctoring />,
   }
 ]);
 function App() {
