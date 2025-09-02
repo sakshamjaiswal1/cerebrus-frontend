@@ -15,6 +15,8 @@ import MeetAHuman from "./pages/MeetAHuman";
 import Careers from "./pages/Careers";
 import Proctoring from "./pages/Proctoring";
 import Algorithm from "./pages/Algorithm";
+import CandidateReport from "./pages/CandidateReport";
+import OurConcept from "./pages/OurConcept";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
   {
     path: "/algorithm",
     element: <Algorithm />,
+  },
+  {
+    path: "/candidate-report",
+    element: <CandidateReport />,
+  },
+  {
+    path: "/our-concept",
+    element: <OurConcept />,
   }
 ]);
 function App() {
