@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import "./rect-anim.css";
+import { useBreakpoint } from "../../hooks/useBreakPoints";
 
 const RectangleAnimation = () => {
+  const { isSm, isMd, isLg } = useBreakpoint();
+
   useEffect(() => {
     const rect1 = document.getElementById("rect1") as HTMLElement;
     const rect2 = document.getElementById("rect2") as HTMLElement;
@@ -11,28 +14,26 @@ const RectangleAnimation = () => {
     let isMerged = false;
 
     function getResponsiveTransforms() {
-      const screenWidth = window.innerWidth;
-
-      // Responsive scaling factors
+      // Responsive scaling factors based on breakpoints
       let translateX, translateY, scaleReduction;
 
-      if (screenWidth <= 480) {
-        // Mobile phones
+      if (isSm) {
+        // Mobile phones (≤639px)
         translateX = 60;
         translateY = 8;
         scaleReduction = 0.7;
-      } else if (screenWidth <= 640) {
-        // Small tablets
+      } else if (isMd) {
+        // Small tablets (640px-767px)
         translateX = 80;
         translateY = 12;
         scaleReduction = 0.65;
-      } else if (screenWidth <= 1024) {
-        // Tablets
+      } else if (isLg) {
+        // Tablets (768px-1023px)
         translateX = 90;
         translateY = 13;
         scaleReduction = 0.6;
       } else {
-        // Desktop (original values scaled)
+        // Desktop (≥1024px)
         translateX = 105;
         translateY = 15;
         scaleReduction = 0.6;
@@ -61,22 +62,12 @@ const RectangleAnimation = () => {
       isMerged = !isMerged;
     }
 
-    // Handle window resize
-    function handleResize() {
-      // Re-animate with new responsive values
-      if (isMerged) {
-        animate();
-      }
-    }
-
     const intervalId = setInterval(animate, 2000);
-    window.addEventListener("resize", handleResize);
 
     return () => {
       clearInterval(intervalId);
-      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isSm, isMd, isLg]);
   return (
     <div
       className="scale-75 sm:scale-90 lg:scale-100 w-full h-full flex items-center justify-center"

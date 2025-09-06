@@ -9,6 +9,13 @@ const DesktopNavigation = () => {
       {/* Desktop Navigation Menu */}
       <nav className=" hidden lg:flex items-center justify-end pr-12 w-3/4 space-x-8">
         <Link
+          to="/"
+          className="text-base font-medium transition-colors duration-200 hover:opacity-70"
+          style={{ color: "#1A323C" }}
+        >
+          Home
+        </Link>
+        <Link
           to="/about"
           className="text-base font-medium transition-colors duration-200 hover:opacity-70"
           style={{ color: "#1A323C" }}

@@ -30,7 +30,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <img src="/Cerebrus_Logo.svg" alt="Cerebrus" className="h-8 w-auto" />
+          <Link to="/" onClick={onClose}>
+            <img
+              src="/Cerebrus_Logo.svg"
+              alt="Cerebrus"
+              className="h-8 w-auto"
+            />
+          </Link>
           <button
             onClick={onClose}
             className="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
@@ -44,6 +50,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
         {/* Mobile Navigation Links */}
         <nav className="flex flex-col p-6 space-y-6">
+          <Link
+            to="/"
+            className="text-lg font-medium transition-colors duration-200 hover:opacity-70"
+            style={{ color: "#1A323C" }}
+            onClick={onClose}
+          >
+            Home
+          </Link>
           <Link
             to="/about"
             className="text-lg font-medium transition-colors duration-200 hover:opacity-70"

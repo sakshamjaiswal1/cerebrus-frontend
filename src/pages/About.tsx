@@ -10,7 +10,7 @@ import RecentUpdatesSection from "../components/about/RecentUpdatesSection";
 function About() {
   return (
     <div className="bg-white">
-      <main className="px-20">
+      <main className="px-4 sm:px-6 lg:px-20">
         <Header isHome={false} />
         <AboutHero />
         <VisionSection />

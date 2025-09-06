@@ -1,24 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+import { useBreakpoint } from "../../hooks/useBreakPoints";
 
 const images = [
-  '/features_hero.svg',
-  '/features_hero.svg',
-  '/features_hero.svg',
-  '/features_hero.svg',
-  '/features_hero.svg',
+  "/features_hero.svg",
+  "/features_hero.svg",
+  "/features_hero.svg",
+  "/features_hero.svg",
+  "/features_hero.svg",
 ];
 
 const FamiliarCustomizable = () => {
   const [currentIndex, setCurrentIndex] = useState(2);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
+  const { isSm, isMd } = useBreakpoint();
+  const isMobile = isSm || isMd; // Mobile/tablet (≤767px)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,13 +38,13 @@ const FamiliarCustomizable = () => {
     const translateXVw = isMobile ? offset * 35 : offset * 15;
     const scale = 1 - Math.abs(offset) * (isMobile ? 0.2 : 0.15);
     const blurPx = Math.abs(offset) * 4;
-    
+
     return {
       transform: `translateX(${translateXVw}vw) scale(${scale})`,
       filter: `blur(${blurPx}px)`,
       zIndex: 10 - Math.abs(offset),
       opacity: isVisible ? 1 : 0,
-      transition: 'all 0.5s ease-out',
+      transition: "all 0.5s ease-out",
     };
   };
 
@@ -67,7 +61,11 @@ const FamiliarCustomizable = () => {
               className="absolute w-[200px] h-[300px] md:w-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg"
               style={getStyle(index)}
             >
-              <img src={src} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+              <img
+                src={src}
+                alt={`Slide ${index}`}
+                className="w-full h-full object-cover"
+              />
             </div>
           ))}
         </div>
