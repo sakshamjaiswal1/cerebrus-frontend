@@ -1,8 +1,8 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import HowToUseHero from "../components/howto/HowToUseHero"
-import HowToUseSteps from "../components/howto/HowToUseSteps"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import HowToUseHero from "../components/howto/HowToUseHero";
+import HowToUseSteps from "../components/howto/HowToUseSteps";
 
 function HowToUse() {
   return (
@@ -14,9 +14,8 @@ function HowToUse() {
         <CTASection />
         <Footer />
       </main>
-
     </div>
-  )
+  );
 }
 
-export default HowToUse
+export default HowToUse;

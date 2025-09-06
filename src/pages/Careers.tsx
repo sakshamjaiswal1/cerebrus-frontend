@@ -1,4 +1,4 @@
-import Header from "../components/common/Header";
+import Header from "../components/common/header";
 import Footer from "../components/common/Footer";
 import CareersHero from "../components/careers/CareersHero";
 import HiringSection from "../components/careers/HiringSection";

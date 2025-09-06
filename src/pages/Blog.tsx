@@ -1,10 +1,10 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import BlogHero from "../components/blog/BlogHero"
-import BlogFeatured from "../components/blog/BlogFeatured"
-import BlogCTA from "../components/blog/BlogCTA"
-import BlogTabs from "../components/blog/BlogTabs"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import BlogHero from "../components/blog/BlogHero";
+import BlogFeatured from "../components/blog/BlogFeatured";
+import BlogCTA from "../components/blog/BlogCTA";
+import BlogTabs from "../components/blog/BlogTabs";
 
 function Blog() {
   return (
@@ -19,7 +19,7 @@ function Blog() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;

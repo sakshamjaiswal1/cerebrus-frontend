@@ -1,9 +1,9 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import AlgorithmHero from "../components/algorithm/AlgorithmHero"
-import HowItComesTogether from "../components/algorithm/HowItComesTogether"
-import CoreArchitecture from "../components/algorithm/CoreArchitecture"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import AlgorithmHero from "../components/algorithm/AlgorithmHero";
+import HowItComesTogether from "../components/algorithm/HowItComesTogether";
+import CoreArchitecture from "../components/algorithm/CoreArchitecture";
 
 function Algorithm() {
   return (
@@ -17,7 +17,7 @@ function Algorithm() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default Algorithm
+export default Algorithm;

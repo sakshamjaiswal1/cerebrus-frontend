@@ -1,8 +1,8 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import ContactHero from "../components/contact/ContactHero"
-import ContactForm from "../components/contact/ContactForm"
-import ContactCards from "../components/contact/ContactCards"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import ContactHero from "../components/contact/ContactHero";
+import ContactForm from "../components/contact/ContactForm";
+import ContactCards from "../components/contact/ContactCards";
 
 function ContactUs() {
   return (
@@ -15,7 +15,7 @@ function ContactUs() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default ContactUs
+export default ContactUs;

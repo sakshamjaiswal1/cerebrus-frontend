@@ -1,13 +1,13 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import FeaturesHero from "../components/features/FeaturesHero"
-import MetaHumanCard from "../components/features/MetaHumanCard"
-import VigilantProctoringCard from "../components/features/VigilantProctoringCard"
-import ComprehensiveReportsCard from "../components/features/ComprehensiveReportsCard"
-import CustomizationCard from "../components/features/CustomizationCard"
-import IntuiteDashboardCard from "../components/features/IntuiteDashboardCard"
-import IntelligenceFrameworkCard from "../components/features/IntelligenceFrameworkCard"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import FeaturesHero from "../components/features/FeaturesHero";
+import MetaHumanCard from "../components/features/MetaHumanCard";
+import VigilantProctoringCard from "../components/features/VigilantProctoringCard";
+import ComprehensiveReportsCard from "../components/features/ComprehensiveReportsCard";
+import CustomizationCard from "../components/features/CustomizationCard";
+import IntuiteDashboardCard from "../components/features/IntuiteDashboardCard";
+import IntelligenceFrameworkCard from "../components/features/IntelligenceFrameworkCard";
 
 function Features() {
   return (
@@ -28,9 +28,8 @@ function Features() {
         <CTASection />
         <Footer />
       </main>
-
     </div>
-  )
+  );
 }
 
-export default Features
+export default Features;

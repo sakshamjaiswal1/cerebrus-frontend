@@ -13,22 +13,7 @@
   --font-sans: "Poppins", sans-serif;
   --color-alt-white: #f7f7f7;
   --color-dark-white: #e9eae5;
-
-  /* Reset default breakpoints */
-  --breakpoint-*: initial;
 }
-
-/* Custom max-width breakpoint variants */
-@custom-variant sm (@media (max-width: 639px));
-@custom-variant md (@media (max-width: 767px));
-@custom-variant lg (@media (max-width: 1023px));
-@custom-variant xl (@media (max-width: 1279px));
-@custom-variant 2xl (@media (max-width: 1535px));
-
-/* Custom max-width breakpoints for specific use cases */
-@custom-variant xs (@media (max-width: 479px));
-@custom-variant 3xl (@media (max-width: 1919px));
-@custom-variant 4xl (@media (max-width: 2559px));
 
 /* Scrolling animation */
 @keyframes scroll {
@@ -97,4 +82,56 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Mobile menu animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.mobile-menu-exit {
+  animation: slideOutRight 0.3s ease-out;
+}
+
+/* Hamburger menu icon animation */
+.hamburger-line {
+  transform-origin: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom breakpoint utilities for hamburger menu */
+@media (max-width: 1023px) {
+  .hamburger-menu-show {
+    display: flex;
+  }
+  .desktop-menu-hide {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hamburger-menu-hide {
+    display: none;
+  }
+  .desktop-menu-show {
+    display: flex;
+  }
 }

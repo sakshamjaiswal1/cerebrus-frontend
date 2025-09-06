@@ -1,8 +1,8 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import StructuredInterviewReports from "../components/candidateReport/StructuredInterviewReports"
-import IntegratedChat from "../components/candidateReport/IntegratedChat"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import StructuredInterviewReports from "../components/candidateReport/StructuredInterviewReports";
+import IntegratedChat from "../components/candidateReport/IntegratedChat";
 
 function CandidateReport() {
   return (
@@ -15,7 +15,7 @@ function CandidateReport() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default CandidateReport
+export default CandidateReport;

@@ -1,9 +1,9 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import WhatsNewHero from "../components/whatsnew/WhatsNewHero"
-import WhatsNextSection from "../components/whatsnew/WhatsNextSection"
-import RecentUpdatesSection from "../components/about/RecentUpdatesSection"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import WhatsNewHero from "../components/whatsnew/WhatsNewHero";
+import WhatsNextSection from "../components/whatsnew/WhatsNextSection";
+import RecentUpdatesSection from "../components/about/RecentUpdatesSection";
 
 function WhatsNew() {
   return (
@@ -17,7 +17,7 @@ function WhatsNew() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default WhatsNew
+export default WhatsNew;
