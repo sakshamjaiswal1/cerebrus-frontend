@@ -33,7 +33,7 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
             <img
               src="/Cerebrus_Logo.svg"
               alt="Cerebrus"
-              className="h-full w-full "
+              className="h-full w-full  min-w-[81px]"
             />
           </Link>
         </div>
@@ -47,18 +47,15 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
           <DesktopNavigation />
 
           {/* Mobile Hamburger Menu Button */}
-          <HamburgerButton 
-            isOpen={isMobileMenuOpen} 
-            onClick={toggleMobileMenu} 
+          <HamburgerButton
+            isOpen={isMobileMenuOpen}
+            onClick={toggleMobileMenu}
           />
         </div>
       </div>
 
       {/* Mobile Menu Overlay */}
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
-        onClose={toggleMobileMenu} 
-      />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
     </header>
   );
 };

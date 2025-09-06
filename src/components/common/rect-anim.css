@@ -1,31 +1,54 @@
 #rect-anim {
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .container {
-        position: relative;
-    }
+  svg {
+    width: 100%;
+    height: 100%;
+    max-width: 750px;
+    max-height: 645px;
+    min-width: 300px;
+    min-height: 258px;
+  }
 
-    svg {
-        width: 750px;
-        height: 645px;
-    }
+  rect {
+    transition: all 2s ease-in-out;
+  }
 
-    rect {
-        transition: all 2s ease-in-out;
-    }
+  #rect1 {
+    transform-origin: center;
+  }
 
-    #rect1 {
-        transform-origin: 142.5px 195px;
-    }
+  #rect2 {
+    transform-origin: center;
+  }
 
-    #rect2 {
-        transform-origin: 502.5px 195px;
-    }
+  #rect3 {
+    transform-origin: center;
+  }
 
-    #rect3 {
-        transform-origin: 142.5px 502.5px;
-    }
+  #rect4 {
+    transform-origin: center;
+  }
+}
 
-    #rect4 {
-        transform-origin: 502.5px 502.5px;
-    }
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  #rect-anim svg {
+    max-width: 400px;
+    max-height: 344px;
+  }
+}
+
+@media (max-width: 480px) {
+  #rect-anim svg {
+    max-width: 300px;
+    max-height: 258px;
+  }
 }
