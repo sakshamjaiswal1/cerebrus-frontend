@@ -12,12 +12,12 @@ import IntelligenceFrameworkCard from "../components/features/IntelligenceFramew
 function Features() {
   return (
     <div className="bg-white">
-      <main className="p-10">
+      <main className="p-4 sm:p-6 lg:p-10">
         <Header />
         <FeaturesHero />
 
         {/* Feature Cards with proper spacing */}
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
           <MetaHumanCard />
           <VigilantProctoringCard />
           <ComprehensiveReportsCard />
