@@ -1,10 +1,10 @@
-import Header from "../components/common/Header"
-import OurConceptHero from "../components/ourconcept/OurConceptHero"
-import CVScreeningSection from "../components/ourconcept/CVScreeningSection"
-import BeyondAssessmentsSection from "../components/ourconcept/BeyondAssessmentsSection"
-import RedefiningInterviewsSection from "../components/ourconcept/RedefiningInterviewsSection"
-import CTASection from "../components/common/CTASection"
-import Footer from "../components/common/Footer"
+import Header from "../components/common/header";
+import OurConceptHero from "../components/ourconcept/OurConceptHero";
+import CVScreeningSection from "../components/ourconcept/CVScreeningSection";
+import BeyondAssessmentsSection from "../components/ourconcept/BeyondAssessmentsSection";
+import RedefiningInterviewsSection from "../components/ourconcept/RedefiningInterviewsSection";
+import CTASection from "../components/common/CTASection";
+import Footer from "../components/common/Footer";
 
 function OurConcept() {
   return (
@@ -19,7 +19,7 @@ function OurConcept() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default OurConcept
+export default OurConcept;

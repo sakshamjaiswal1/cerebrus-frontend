@@ -1,4 +1,4 @@
-import TeamCard from "../common/TeamCard"
+import TeamCard from "../common/TeamCard";
 
 const TeamSection = () => {
   const teamMembers = [
@@ -7,39 +7,43 @@ const TeamSection = () => {
       image: "/exp_img_1.svg",
       name: "Arjun Bansal",
       position: "Founder & CEO (Product Lead Strategy Officer)",
-      description: "Visionary leader with 10+ years of experience in AI and product strategy. Passionate about revolutionizing the hiring process through innovative technology."
+      description:
+        "Visionary leader with 10+ years of experience in AI and product strategy. Passionate about revolutionizing the hiring process through innovative technology.",
     },
     {
-      id: "team2", 
+      id: "team2",
       image: "/exp_img_2.svg",
       name: "Priya Sharma",
       position: "Co-Founder & CTO (Principal AI Research Lead)",
-      description: "AI research expert with a PhD in Machine Learning. Leads our technical innovation and ensures our AI models deliver accurate and fair assessments."
+      description:
+        "AI research expert with a PhD in Machine Learning. Leads our technical innovation and ensures our AI models deliver accurate and fair assessments.",
     },
     {
       id: "team3",
       image: "/exp_img_3.svg",
-      name: "Rajesh Kumar", 
+      name: "Rajesh Kumar",
       position: "Head of Operations (Principal Technology Officer)",
-      description: "Operations excellence expert who ensures smooth platform delivery. Focuses on scalability and user experience optimization."
+      description:
+        "Operations excellence expert who ensures smooth platform delivery. Focuses on scalability and user experience optimization.",
     },
     {
       id: "team4",
       image: "/exp_img_4.svg",
       name: "Sarah Johnson",
       position: "Principal Technology Officer",
-      description: "Technology architecture specialist with expertise in cloud platforms and system design. Ensures our platform is robust and scalable."
-    }
-  ]
+      description:
+        "Technology architecture specialist with expertise in cloud platforms and system design. Ensures our platform is robust and scalable.",
+    },
+  ];
 
   return (
-    <section className="w-full py-16 bg-white">
-      <div className="mx-auto px-8">
-        <h2 className="text-3xl font-medium text-primary mb-8">
+    <section className="w-full py-8 sm:py-12 lg:py-16 bg-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-6 sm:mb-8">
           The Minds Behind the Mission
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}
@@ -52,7 +56,7 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TeamSection
+export default TeamSection;

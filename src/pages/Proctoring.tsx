@@ -1,13 +1,13 @@
-import Header from "../components/common/Header"
-import Footer from "../components/common/Footer"
-import CTASection from "../components/home/CTASection"
-import ProctoringHero from "../components/proctoring/ProctoringHero"
-import MeasuresWeTake from "../components/proctoring/MeasuresWeTake"
+import Header from "../components/common/header";
+import Footer from "../components/common/Footer";
+import CTASection from "../components/home/CTASection";
+import ProctoringHero from "../components/proctoring/ProctoringHero";
+import MeasuresWeTake from "../components/proctoring/MeasuresWeTake";
 
 function Proctoring() {
   return (
     <div className="bg-alt-white">
-      <main className="max-w-6xl mx-auto pt-10">
+      <main className="max-w-6xl mx-auto pt-4 sm:pt-6 lg:pt-10 px-4 sm:px-6 lg:px-8">
         <Header />
         <ProctoringHero />
         <MeasuresWeTake />
@@ -15,7 +15,7 @@ function Proctoring() {
         <Footer />
       </main>
     </div>
-  )
+  );
 }
 
-export default Proctoring
+export default Proctoring;
