@@ -1,8 +1,8 @@
 import { useBreakpoint } from "../../hooks/useBreakPoints";
 
 const VisionSection = () => {
-  const { isSm, isMd } = useBreakpoint();
-  const isMobile = isSm || isMd; // Mobile/tablet (≤767px)
+  const { isSm } = useBreakpoint();
+  const isMobile = isSm;
 
   const visionData = [
     {

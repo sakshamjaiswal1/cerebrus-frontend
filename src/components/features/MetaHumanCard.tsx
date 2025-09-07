@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router";
 import AnimatedButton from "../common/AnimatedButton";
 
 const MetaHumanCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch group">
       {/* Left Section - Image with Text Overlay */}
-      <div className="relative rounded-xl overflow-hidden flex-1 lg:group-hover:flex-[2] transition-all duration-500 h-64 sm:h-80 lg:max-h-[70vh]">
+      <div className="relative rounded-xl overflow-hidden flex-1 lg:group-hover:flex-[2] transition-all duration-500 h-64 sm:h-80 lg:h-[772px] lg:max-h-[70vh]">
         <img
           src="/features_hero.svg"
           alt="MetaHuman Interviewer"
@@ -13,29 +16,37 @@ const MetaHumanCard = () => {
 
         {/* Text Overlay */}
         <div className="absolute inset-0 bg-[#00000070] bg-opacity-40 flex flex-col justify-end p-4 sm:p-6 lg:p-8">
-          {/* Content that hides on hover */}
+          {/* Content that hides on hover on desktop, always visible on mobile */}
           <div className="lg:group-hover:opacity-0 lg:group-hover:scale-95 transition-all duration-500">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white mb-3 sm:mb-4 lg:mb-6">
               MetaHuman Interviewer
             </h2>
-            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-4 sm:mb-6">
+            {/* Show shorter text on mobile, full text on desktop */}
+            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-4 sm:mb-6 lg:block hidden">
               Cerebrus' MetaHuman Interviewer bridges the gap between AI
               efficiency and human nuance. It responds in real time, adjusting
               its follow-ups and flow based on how the candidate answers.
             </p>
-            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-6 sm:mb-8">
+            <p className="text-sm leading-relaxed text-white opacity-90 mb-3 lg:hidden">
+              The Cerebrus MetaHuman Interviewer blends structured evaluation
+              with realism and human-like interaction.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-6 sm:mb-8 lg:block hidden">
               Visually, you get cinematic realism from natural eye movement to
               subtle shifts in posture that adds to the immersion.
             </p>
             <div className="flex">
               <div className="group/button">
-                <AnimatedButton text="Click for more" />
+                <AnimatedButton
+                  text="Click for more"
+                  onClick={() => navigate("/meet-a-human")}
+                />
               </div>
             </div>
           </div>
 
-          {/* Title that shows on hover - positioned at very bottom */}
-          <div className="opacity-0 lg:group-hover:opacity-100 transition-all duration-500 absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
+          {/* Title that shows on hover - positioned at very bottom (desktop only) */}
+          <div className="opacity-0 lg:group-hover:opacity-100 transition-all duration-500 absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 hidden lg:block">
             <h2 className="text-2xl sm:text-3xl font-semibold text-white">
               MetaHuman Interviewer
             </h2>
@@ -45,20 +56,22 @@ const MetaHumanCard = () => {
 
       {/* Right Section - Interactive Proctoring Info */}
       <div className="relative bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 cursor-pointer transition-all duration-500 hover:shadow-lg flex-[0.3] lg:group-hover:flex-[1.5] h-auto lg:max-h-[70vh]">
-        {/* Default State */}
+        {/* Default State - Always visible on mobile, hides on desktop hover */}
         <div className="lg:group-hover:opacity-0 lg:group-hover:scale-95 transition-all duration-500">
-          <h3 className="text-xl sm:text-2xl font-semibold text-primary mb-3 sm:mb-4">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary mb-3 sm:mb-4 text-center lg:text-left">
             Vigilant Proctoring
           </h3>
-          <p className="text-sm sm:text-base leading-relaxed text-primary opacity-70 mb-4 sm:mb-6">
-            Cerebrus makes sure each interview is real, focused, and free of
-            distractions.
+          <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-primary opacity-70 mb-4 sm:mb-6 text-center lg:text-left">
+            Our proctoring measures check for tab switching, unauthorized tools,
+            lip sync, eye movement and background activity.
           </p>
-          <img
-            src="/card_img_1.svg"
-            alt="Vigilant Proctoring"
-            className="w-full h-auto rounded-lg"
-          />
+          <div className="flex justify-center">
+            <img
+              src="/card_img_1.svg"
+              alt="Vigilant Proctoring"
+              className="w-full h-auto rounded-lg max-w-xs lg:max-w-none"
+            />
+          </div>
         </div>
 
         {/* Hover State */}
@@ -110,7 +123,10 @@ const MetaHumanCard = () => {
           </p>
 
           <div className="group/button">
-            <AnimatedButton text="Click for more" />
+            <AnimatedButton
+              text="Click for more"
+              onClick={() => navigate("/proctoring")}
+            />
           </div>
         </div>
       </div>

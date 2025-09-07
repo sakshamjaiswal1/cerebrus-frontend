@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router";
 import AnimatedButton from "../common/AnimatedButton";
 
 const VigilantProctoringCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
       {/* Left Image */}
@@ -23,7 +26,10 @@ const VigilantProctoringCard = () => {
           detects suspicious behavior while maintaining candidate privacy and
           comfort.
         </p>
-        <AnimatedButton text="Click for more" />
+        <AnimatedButton
+          text="Click for more"
+          onClick={() => navigate("/proctoring")}
+        />
       </div>
     </div>
   );

@@ -8,20 +8,20 @@ import ResponsiveByDesign from "../components/meetahuman/ResponsiveByDesign";
 import TheRealismLayer from "../components/meetahuman/TheRealismLayer";
 
 const MeetAHuman = () => {
-    return (
-        <div className="bg-primary">
-            <main className="p-10">
-                <Header2 />
-                <MeetAHumanHero />
-                <TheRealismLayer />
-                <ResponsiveByDesign />
-                <ObjectivityBuiltIn />
-                <FamiliarCustomizable />
-                <CTASection />
-            </main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="bg-primary">
+      <main className="p-4 sm:p-6 lg:p-10">
+        <Header2 />
+        <MeetAHumanHero />
+        <TheRealismLayer />
+        <ResponsiveByDesign />
+        <ObjectivityBuiltIn />
+        <FamiliarCustomizable />
+        <CTASection />
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default MeetAHuman;
