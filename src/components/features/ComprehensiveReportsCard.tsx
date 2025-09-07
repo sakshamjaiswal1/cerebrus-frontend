@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router";
 import AnimatedButton from "../common/AnimatedButton";
 
 const ComprehensiveReportsCard = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
       {/* Left Content */}
@@ -18,7 +20,7 @@ const ComprehensiveReportsCard = () => {
           notice period, red flags and more are and customized like a personal
           interview summary.
         </p>
-        <AnimatedButton text="Click for more" />
+        <AnimatedButton text="Click for more" onClick={() => navigate("/candidate-report")} />
       </div>
 
       {/* Right Image */}

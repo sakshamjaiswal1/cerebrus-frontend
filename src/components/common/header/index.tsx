@@ -39,7 +39,7 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
         </div>
 
         <div
-          className={`flex w-11/12 justify-end p-4 py-6 ${
+          className={`flex w-11/12 justify-end p-4 py-2 ${
             isHome ? "rounded-t-xl bg-brand-bg" : ""
           }`}
         >

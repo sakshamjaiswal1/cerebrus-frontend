@@ -123,7 +123,7 @@ function ApplicationUI() {
 
   return (
     <div className="bg-white">
-      <main className="p-10">
+      <main className="p-4 sm:p-6 lg:p-10">
         <Header />
         <ApplicationUIHero />
         {sections.map((section, index) => (
