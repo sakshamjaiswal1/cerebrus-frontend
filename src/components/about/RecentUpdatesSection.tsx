@@ -1,3 +1,4 @@
+import AnimatedButton from "../common/AnimatedButton";
 import SwipeableCarousel from "../common/SwipeableCarousel";
 
 const RecentUpdatesSection = () => {
@@ -62,6 +63,7 @@ const RecentUpdatesSection = () => {
           autoPlayInterval={1000}
           showButton={true}
           className="w-full"
+          buttonComponent={<AnimatedButton text="Read More" className="!ml-[45%] !border !border-primary !bg-transparent" />}
         />
       </div>
     </section>

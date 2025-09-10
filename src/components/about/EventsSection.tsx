@@ -1,48 +1,48 @@
 import SwipeableCarousel from "../common/SwipeableCarousel";
 
 const EventsSection = () => {
+  // Remove date and title from each event in eventsData
   const eventsData = [
     {
       id: "event1",
       image: "/card_img_1.svg",
-      title: "The Entrepreneur ship Championship Organized by MAITS",
+      title: "",
       description:
         "Celebrating innovation and entrepreneurship in the tech industry.",
-      date: "March 2024",
+      date: "",
     },
     {
       id: "event2",
       image: "/card_img_2.svg",
-      title: "Startup India Investment Summit 2024",
+      title: "",
       description:
         "Presenting our AI-powered interview platform to investors and industry leaders.",
-      date: "February 2024",
+      date: "",
     },
     {
       id: "event3",
       image: "/card_img_3.svg",
-      title: "Business Leader of the Year at the EB-5 World CDS Congress",
+      title: "",
       description: "Recognition for excellence in AI-driven hiring solutions.",
-      date: "January 2024",
+      date: "",
     },
     {
       id: "event4",
       image: "/exp_img_1.svg",
-      title: "FIATA World Congress 2024",
+      title: "",
       description:
         "Global platform showcasing innovative recruitment technologies.",
-      date: "December 2023",
+      date: "",
     },
     {
       id: "event5",
       image: "/exp_img_2.svg",
-      title: "EB-5 Industry Achievement Awards",
+      title: "",
       description:
         "Award for outstanding contribution to the recruitment industry.",
-      date: "November 2023",
+      date: "",
     },
   ];
-
   return (
     <section className="w-full py-8 sm:py-12 lg:py-16">
       <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-6 sm:mb-8">
@@ -54,6 +54,7 @@ const EventsSection = () => {
           cardBackground="bg-gradient-to-b from-transparent to-gray-100"
           autoPlayInterval={5000}
           className="w-full"
+          descClassName="!text-lg font-medium !text-gray-600"
         />
       </div>
     </section>

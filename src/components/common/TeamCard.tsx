@@ -31,11 +31,11 @@ const TeamCard = ({
         {/* Front Side */}
         <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-lg">
           {/* Image Section with Primary Background */}
-          <div className="h-3/4 bg-primary p-4 flex items-end justify-center">
+          <div className="h-3/4 bg-primary p-0 flex items-end justify-center">
             <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-contain rounded-xl"
             />
           </div>
 

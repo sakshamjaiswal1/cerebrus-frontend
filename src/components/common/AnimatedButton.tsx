@@ -1,13 +1,15 @@
 const AnimatedButton = ({
   text,
   onClick,
+  className,
 }: {
   text: string;
   onClick?: () => void;
+  className?: string;
 }) => {
   return (
     <button
-      className="group relative overflow-hidden bg-white text-primary px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white"
+      className={`group relative overflow-hidden bg-white text-primary px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white ${className}`}
       onClick={() => onClick?.()}
     >
       {/* Sliding background */}

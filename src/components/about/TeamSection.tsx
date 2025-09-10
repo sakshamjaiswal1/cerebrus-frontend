@@ -4,33 +4,33 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: "team1",
-      image: "/exp_img_1.svg",
-      name: "Arjun Bansal",
-      position: "Founder & CEO (Product Lead Strategy Officer)",
+      image: "/siddhant.png",
+      name: "Siddhant Bansal",
+      position: "Founder & CEO (Chief Executive Officer)",
       description:
         "Visionary leader with 10+ years of experience in AI and product strategy. Passionate about revolutionizing the hiring process through innovative technology.",
     },
     {
       id: "team2",
-      image: "/exp_img_2.svg",
-      name: "Priya Sharma",
-      position: "Co-Founder & CTO (Principal AI Research Lead)",
+      image: "/ashwani.png",
+      name: "Ashwani",
+      position: "Co-Founder & CPO (Chief Product Officer)",
       description:
         "AI research expert with a PhD in Machine Learning. Leads our technical innovation and ensures our AI models deliver accurate and fair assessments.",
     },
     {
       id: "team3",
-      image: "/exp_img_3.svg",
-      name: "Rajesh Kumar",
-      position: "Head of Operations (Principal Technology Officer)",
+      image: "/pransh.png",
+      name: "Pranshuman Singh Bhouriyal",
+      position: "COO (Chief Operating Officer)",
       description:
         "Operations excellence expert who ensures smooth platform delivery. Focuses on scalability and user experience optimization.",
     },
     {
       id: "team4",
-      image: "/exp_img_4.svg",
-      name: "Sarah Johnson",
-      position: "Principal Technology Officer",
+      image: "/somya.png",
+      name: "Somya Darshan Pattnaik",
+      position: "CTO (Chief Technology Officer)",
       description:
         "Technology architecture specialist with expertise in cloud platforms and system design. Ensures our platform is robust and scalable.",
     },

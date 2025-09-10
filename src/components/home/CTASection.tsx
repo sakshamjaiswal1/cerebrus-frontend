@@ -8,8 +8,8 @@ const CTASection = () => {
         {/* Content will go here later */}
         <div className="flex items-center justify-center h-full">
           <div className="text-center">
-            <h2 className="text-6xl font-medium text-primary-light mb-4">Book a demo!</h2>
-            <p className="text-lg text-white/90 mb-6">Try Cerebrus today!</p>
+            <h2 className="text-5xl font-medium text-primary-light my-4">Try Cerebrus today!</h2>
+            <p className="text-lg text-white/90 mb-6">Book a demo!</p>
             <AnimatedButton text="Let's Connect" />
           </div>
         </div>

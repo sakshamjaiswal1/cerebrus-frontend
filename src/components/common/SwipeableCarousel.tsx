@@ -15,6 +15,8 @@ interface SwipeableCarouselProps {
   cardBackground?: string
   className?: string
   showButton?: boolean
+  descClassName?: string
+  buttonComponent?: React.ReactNode
 }
 
 const SwipeableCarousel = ({ 
@@ -22,7 +24,9 @@ const SwipeableCarousel = ({
   autoPlayInterval = 1000, 
   cardBackground = 'bg-white',
   className = '',
-  showButton = false
+  showButton = false,
+  descClassName = '',
+  buttonComponent = null,
 }: SwipeableCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
@@ -78,7 +82,7 @@ const SwipeableCarousel = ({
             className={`flex-shrink-0 w-80 ${cardBackground} rounded-2xl overflow-hidden border border-gray-200 transition-transform duration-300 hover:scale-105`}
           >
             {/* Image Section */}
-            <div className="h-48 overflow-hidden">
+            <div className="min-h-48 overflow-hidden">
               <img 
                 src={item.image} 
                 alt={item.title}
@@ -93,7 +97,7 @@ const SwipeableCarousel = ({
               </h3>
               
               {item.description && (
-                <p className="text-sm text-primary opacity-70 mb-4 line-clamp-3">
+                <p className={`text-sm text-primary opacity-70 mb-4 line-clamp-3 ${descClassName}`}>
                   {item.description}
                 </p>
               )}
@@ -104,7 +108,9 @@ const SwipeableCarousel = ({
                 </p>
               )}
               
-              {showButton && item.buttonText && (
+              {showButton && item.buttonText && buttonComponent ? (
+                buttonComponent
+              ) : (
                 <button className="text-sm font-medium text-secondary hover:opacity-70 transition-opacity">
                   {item.buttonText} →
                 </button>
