@@ -43,7 +43,22 @@ const TeamSection = () => {
           The Minds Behind the Mission
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
+        {/* Mobile: Horizontal scroll */}
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 sm:hidden">
+          {teamMembers.map((member) => (
+            <div key={member.id} className="flex-shrink-0 w-72">
+              <TeamCard
+                image={member.image}
+                name={member.name}
+                position={member.position}
+                description={member.description}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Grid layout */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}
