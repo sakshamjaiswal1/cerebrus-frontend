@@ -42,7 +42,7 @@ const Careers = () => {
         <link rel="canonical" href="https://cerebrus.ai/careers" />
       </Helmet>
       <Header />
-      <main className="px-6 md:px-12 lg:px-24 py-12">
+      <main className="px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12">
         <CareersHero />
         <HiringSection />
         <GallerySection />

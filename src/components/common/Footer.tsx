@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import FacebookIcon from './icons/FacebookIcon'
 import YouTubeIcon from './icons/YouTubeIcon'
 import XIcon from './icons/XIcon'
@@ -70,36 +71,36 @@ const Footer = () => {
           <div>
             <h3 className="text-primary font-semibold text-lg mb-6">Product</h3>
             <nav className="flex flex-col space-y-4">
-              <a 
-                href="#" 
+              <Link 
+                to="/how-to-use" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Watch Demo
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/our-concept" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Our Concept
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/algorithm" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Framework
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/meet-a-human" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 MetaHuman
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/application-ui" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Platform
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -107,24 +108,24 @@ const Footer = () => {
           <div>
             <h3 className="text-primary font-semibold text-lg mb-6">Resources</h3>
             <nav className="flex flex-col space-y-4">
-              <a 
-                href="#" 
+              <Link 
+                to="/how-to-use" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Getting Started
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/blog" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Blog
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/whats-new" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 What's New
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -132,24 +133,24 @@ const Footer = () => {
           <div>
             <h3 className="text-primary font-semibold text-lg mb-6">Company</h3>
             <nav className="flex flex-col space-y-4">
-              <a 
-                href="#" 
+              <Link 
+                to="/about" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 About
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/careers" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Careers
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="text-primary hover:opacity-70 transition-opacity duration-200"
               >
                 Contact Us
-              </a>
+              </Link>
             </nav>
           </div>
           </div>

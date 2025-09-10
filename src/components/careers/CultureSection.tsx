@@ -6,13 +6,13 @@ interface CultureCardProps {
 
 const CultureCard: React.FC<CultureCardProps> = ({ icon, title, description }) => {
     return (
-        <div className="bg-white rounded-2xl p-6 flex items-start space-x-6 shadow-sm">
-            <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <img src={icon} alt="" className="w-10 h-10" />
+        <div className="bg-white rounded-2xl p-4 sm:p-6 flex items-start space-x-4 sm:space-x-6 shadow-sm">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src={icon} alt="" className="w-6 h-6 sm:w-10 sm:h-10" />
             </div>
-            <div>
-                <h3 className="text-xl font-semibold text-primary mb-2">{title}</h3>
-                <p className="text-gray-500">{description}</p>
+            <div className="flex-1">
+                <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2">{title}</h3>
+                <p className="text-sm sm:text-base text-gray-500 leading-relaxed">{description}</p>
             </div>
         </div>
     )
@@ -44,10 +44,10 @@ const CultureSection = () => {
     ];
 
     return (
-        <section className="mb-24">
-            <h2 className="text-4xl font-bold text-primary mb-4">A Culture of Fairness and Simplicity</h2>
-            <p className="text-gray-500 mb-8 max-w-3xl">Our culture wasn’t written first, it came out of how we work, by figuring things out, fixing what was broken, and helping each other get better. It’s practical, honest, and still evolving.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="mb-12 sm:mb-16 lg:mb-24">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">A Culture of Fairness and Simplicity</h2>
+            <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-3xl leading-relaxed">Our culture wasn't written first, it came out of how we work, by figuring things out, fixing what was broken, and helping each other get better. It's practical, honest, and still evolving.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {cultureItems.map((item, index) => (
                     <CultureCard key={index} icon={item.icon} title={item.title} description={item.description} />
                 ))}
