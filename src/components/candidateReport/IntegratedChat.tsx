@@ -8,7 +8,7 @@ const IntegratedChat = () => {
         
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Left Column - Feature Descriptions with Icons */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-6 lg:space-y-8 xl:block hidden">
             {/* Timeline View */}
             <div className="relative">
               <div className="flex items-start gap-4 lg:relative lg:w-full">

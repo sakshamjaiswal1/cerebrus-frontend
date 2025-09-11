@@ -13,11 +13,12 @@ const StructuredInterviewReports = () => {
 
         {/* Main Report Image */}
         <div className="flex justify-center">
-          <img 
-            src="/report-1.svg" 
-            alt="Structured Interview Reports Dashboard" 
-            className="w-full h-auto rounded-lg shadow-lg"
+          <img
+            src="/report-1.svg"
+            alt="Structured Interview Reports Dashboard"
+            className="w-full h-auto rounded-lg shadow-lg max-md:hidden"
           />
+          <img src="/struct-int.svg" alt="" className="w-full h-auto rounded-lg max-md:block hidden -mt-40" />
         </div>
       </div>
     </section>
