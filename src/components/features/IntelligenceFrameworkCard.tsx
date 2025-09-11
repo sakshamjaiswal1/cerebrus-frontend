@@ -6,7 +6,7 @@ const IntelligenceFrameworkCard = () => {
       {/* Left Image */}
       <div className="flex justify-center order-2 lg:order-1">
         <img
-          src="/exp_img_1.svg"
+          src="/int-fram.svg"
           alt="Intelligence Framework"
           className="w-full h-auto rounded-lg"
         />
@@ -26,7 +26,7 @@ const IntelligenceFrameworkCard = () => {
           This ensures that hiring decisions are not only fast, also but
           calculated and reliable.
         </p>
-        <AnimatedButton text="Click for more" />
+        <AnimatedButton text="Click for more" className="!border !border-primary !bg-transparent" />
       </div>
     </div>
   );

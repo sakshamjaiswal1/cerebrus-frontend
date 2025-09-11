@@ -9,7 +9,7 @@ const AnimatedButton = ({
 }) => {
   return (
     <button
-      className={`group relative overflow-hidden bg-white text-primary px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white ${className}`}
+      className={`cursor-pointer group relative overflow-hidden bg-white text-primary px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white ${className}`}
       onClick={() => onClick?.()}
     >
       {/* Sliding background */}
