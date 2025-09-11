@@ -5,6 +5,7 @@ const MeasuresWeTake = () => {
       title: "Background Activity Surveillance",
       description:
         "Cerebrus actively monitors background noise and movements to detect unauthorized activities. This feature ensures that the test taker remains in a distraction-free and compliant environment.",
+      mobDesc: "Detects noise and movement during the interview.",
       image: "/proc-1.gif",
     },
     {
@@ -12,6 +13,7 @@ const MeasuresWeTake = () => {
       title: "Remote Access Sharing Check",
       description:
         "Preventing unauthorized access is critical. Our system detects any attempts to share control of the test environment with third parties, ensuring that only the authorized user completes the exam.",
+      mobDesc: "Flags shared control or third-party access.",
       image: "/proc-2.gif",
     },
     {
@@ -19,6 +21,7 @@ const MeasuresWeTake = () => {
       title: "Screen Recording",
       description:
         "Every session is recorded for later review, capturing all on-screen activities to provide an additional layer of security and transparency.",
+      mobDesc: "Saves all on-screen activity for later review.",
       image: "/proc-3.gif",
     },
     {
@@ -26,6 +29,7 @@ const MeasuresWeTake = () => {
       title: "Eye Movement Tracking",
       description:
         "Using advanced AI, Cerebrus tracks eye movements to identify potential cheating behaviors, such as looking away from the screen or consulting unauthorized materials.",
+      mobDesc: "Monitors gaze for signs of distraction or misconduct.",
       image: "/proc-4.gif",
     },
     {
@@ -33,6 +37,7 @@ const MeasuresWeTake = () => {
       title: "Lip Sync Check",
       description:
         "By analyzing lip movements, our technology ensures that the test taker isn't receiving verbal cues or reading answers aloud to an external party.",
+      mobDesc: "Identifies verbal cues or read-aloud answers.",
       image: "/proc-5.gif",
     },
     {
@@ -40,6 +45,7 @@ const MeasuresWeTake = () => {
       title: "Tab Switching Detection",
       description:
         "Any attempt to switch tabs or access unauthorized resources during the test is instantly flagged, maintaining a secure testing environment.",
+      mobDesc: "Detects when users move away from the test screen.",
       image: "/proc-6.gif",
     },
   ];
@@ -61,14 +67,15 @@ const MeasuresWeTake = () => {
                 <img
                   src={measure.image}
                   alt={measure.title}
-                  className="w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 mb-3 sm:mb-4 rounded-lg object-contain"
+                  className="w-40 sm:w-20 lg:w-24 h-40 sm:h-20 lg:h-24 mb-3 sm:mb-4 rounded-lg object-contain"
                 />
                 <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">
                   {measure.title}
                 </h3>
-                <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70">
+                <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70 max-md:hidden">
                   {measure.description}
                 </p>
+                <p className="text-lg sm:text-sm leading-relaxed text-primary opacity-70 max-md:block hidden">{measure.mobDesc}</p>
               </div>
             </div>
           ))}
