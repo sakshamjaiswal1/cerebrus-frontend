@@ -17,9 +17,7 @@ const JobCard: React.FC<JobCardProps> = ({ title, experience }) => {
                 </a>
             </div>
             <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 sm:h-8 sm:w-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+                <img src="/suitcase.svg" alt="Career icon" className="w-full h-full object-contain" />
             </div>
         </div>
     )
@@ -34,7 +32,7 @@ const HiringSection = () => {
 
     return (
         <section className="mb-12 sm:mb-16 lg:mb-24">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-6 sm:mb-8">Now Hiring</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-primary mb-6 sm:mb-8">Now Hiring</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 {jobs.map((job, index) => (
                     <JobCard key={index} title={job.title} experience={job.experience} />

@@ -9,7 +9,7 @@ import GradientCTA from "../components/careers/GradientCTA";
 
 const Careers = () => {
   return (
-    <div className="bg-brand-bg">
+    <div className="bg-gray-50">
       <Helmet>
         <title>Careers - Join Cerebrus | AI Interview Technology Jobs</title>
         <meta
@@ -41,8 +41,8 @@ const Careers = () => {
         />
         <link rel="canonical" href="https://cerebrus.ai/careers" />
       </Helmet>
-      <Header />
       <main className="px-4 sm:px-6 md:px-12 lg:px-24 py-8 sm:py-12">
+        <Header />
         <CareersHero />
         <HiringSection />
         <GallerySection />

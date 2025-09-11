@@ -1,10 +1,10 @@
 const GallerySection = () => {
     const images = [
-        "/features_hero.svg",
-        "/features_hero.svg",
-        "/features_hero.svg",
-        "/features_hero.svg",
-        "/features_hero.svg",
+        "/gall-1.svg",
+        "/gall-2.svg",
+        "/gall-3.svg",
+        "/gall-4.svg",
+        "/gall-5.svg",
     ];
     
     return (
@@ -21,7 +21,7 @@ const GallerySection = () => {
             <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-2xl">Here's a look at the team behind Cerebrus, and the culture that shapes how we work.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div className="col-span-1">
-                    <img src={images[0]} alt="Gallery image 1" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
+                    <img src={images[0]} alt="Gallery image 1" className="w-full h-48 sm:h-56 lg:h-64 object-fill rounded-2xl" />
                 </div>
                 <div className="col-span-1">
                     <img src={images[1]} alt="Gallery image 2" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
