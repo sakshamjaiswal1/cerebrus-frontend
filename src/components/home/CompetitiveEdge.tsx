@@ -59,16 +59,16 @@ const CompetitiveEdge = () => {
                     Quality of Interview
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={35} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={25} />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -76,16 +76,16 @@ const CompetitiveEdge = () => {
                     Evaluation Reliability
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={35} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={25} />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -93,16 +93,16 @@ const CompetitiveEdge = () => {
                     Time-to-Hire
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={50} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={25} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -111,16 +111,16 @@ const CompetitiveEdge = () => {
                     <div>on Senior Staff</div>
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={50} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={25} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -128,16 +128,16 @@ const CompetitiveEdge = () => {
                     Cost Efficiency
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={35} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={25} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                 </tr>
                 <tr>
@@ -145,16 +145,16 @@ const CompetitiveEdge = () => {
                     Confidentiality
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={50} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
-                    <GradientPill />
+                    <GradientPill fillPercentage={100} />
                   </td>
                 </tr>
               </tbody>

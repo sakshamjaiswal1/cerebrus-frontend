@@ -69,7 +69,7 @@ const Experience = () => {
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
             {/* Image Section with Sliding Animation */}
             <div
-              className="w-full lg:w-1/2 h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden relative"
+              className="w-full lg:w-1/2 h-96 sm:h-80 lg:h-96 rounded-2xl overflow-hidden relative"
               style={{
                 background:
                   "linear-gradient(135deg, #1A323C 0%, #2A4B52 50%, #A5F5ED 100%)",
@@ -105,7 +105,7 @@ const Experience = () => {
             </div>
 
             {/* Content Section with Text Animation */}
-            <div className="w-full lg:w-1/2 space-y-4 text-center lg:text-left">
+            <div className="w-full lg:w-1/2 space-y-4 text-left">
               <h3 className="text-lg sm:text-xl font-semibold text-primary transition-opacity duration-500">
                 {currentExperience.title}
               </h3>
@@ -115,7 +115,7 @@ const Experience = () => {
               </p>
 
               {/* Read More Button */}
-              <AnimatedButton text="Read more" />
+              <AnimatedButton text="Read more" className="!border !border-primary" />
             </div>
           </div>
         </div>

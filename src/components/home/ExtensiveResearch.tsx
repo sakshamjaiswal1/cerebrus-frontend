@@ -4,7 +4,12 @@ function ExtensiveResearch() {
       <img
         src="/Extensive_Research.svg"
         alt="Extensive Research"
-        className="w-full h-auto rounded-xl"
+        className="w-full h-auto rounded-xl max-md:hidden"
+      />
+      <img
+        src="/ext-res-mobile.svg"
+        alt="Extensive Research"
+        className="w-full h-auto rounded-xl max-md:block hidden"
       />
     </section>
   );
