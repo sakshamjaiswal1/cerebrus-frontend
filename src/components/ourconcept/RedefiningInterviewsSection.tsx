@@ -14,7 +14,7 @@ const RedefiningInterviewsSection = () => {
           </div>
           {/* Right Column: Text Content */}
           <div>
-            <h2 className="text-4xl font-bold text-primary mb-6">
+            <h2 className="text-4xl font-medium text-primary mb-6">
               Redefining Interviews
             </h2>
             <p className="text-lg text-primary opacity-80 leading-relaxed mb-4">

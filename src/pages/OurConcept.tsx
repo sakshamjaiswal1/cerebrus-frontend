@@ -47,8 +47,8 @@ function OurConcept() {
       <main className="max-w-7xl mx-auto pt-10">
         <Header />
         <OurConceptHero />
-        <CVScreeningSection />
         <BeyondAssessmentsSection />
+        <CVScreeningSection />
         <RedefiningInterviewsSection />
         <CTASection />
         <Footer />
