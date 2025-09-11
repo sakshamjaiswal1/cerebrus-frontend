@@ -58,19 +58,30 @@ const MetaHumanCard = () => {
       <div className="relative bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 cursor-pointer transition-all duration-500 hover:shadow-lg flex-[0.3] lg:group-hover:flex-[1.5] h-auto lg:max-h-[70vh]">
         {/* Default State - Always visible on mobile, hides on desktop hover */}
         <div className="lg:group-hover:opacity-0 lg:group-hover:scale-95 transition-all duration-500">
-          <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary mb-3 sm:mb-4 text-center lg:text-left">
-            Vigilant Proctoring
-          </h3>
-          <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-primary opacity-70 mb-4 sm:mb-6 text-center lg:text-left">
-            Our proctoring measures check for tab switching, unauthorized tools,
-            lip sync, eye movement and background activity.
-          </p>
+          <div className="max-md:hidden">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-primary mb-3 sm:mb-4 text-center lg:text-left">
+              Vigilant Proctoring
+            </h3>
+            <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-primary opacity-70 mb-4 sm:mb-6 text-center lg:text-left">
+              Our proctoring measures check for tab switching, unauthorized tools,
+              lip sync, eye movement and background activity.
+            </p>
+          </div>
           <div className="flex justify-center">
             <img
               src="/card_img_1.svg"
               alt="Vigilant Proctoring"
               className="w-full h-auto rounded-lg max-w-xs lg:max-w-none"
             />
+          </div>
+          <div className="max-md:block hidden my-2">
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-medium text-primary  text-left">
+              Vigilant Proctoring
+            </h3>
+            <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-primary opacity-70 mb-4 sm:mb-6 text-left">
+              Our proctoring measures check for tab switching, unauthorized tools,
+              lip sync, eye movement and background activity.
+            </p>
           </div>
         </div>
 

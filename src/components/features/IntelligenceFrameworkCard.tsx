@@ -2,9 +2,9 @@ import AnimatedButton from "../common/AnimatedButton";
 
 const IntelligenceFrameworkCard = () => {
   return (
-    <div className="bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+    <div className="bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center lg:py-16">
       {/* Left Image */}
-      <div className="flex justify-center order-2 lg:order-1">
+      <div className="flex justify-center order-1">
         <img
           src="/int-fram.svg"
           alt="Intelligence Framework"

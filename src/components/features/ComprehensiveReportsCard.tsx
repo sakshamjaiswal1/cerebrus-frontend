@@ -6,7 +6,7 @@ const ComprehensiveReportsCard = () => {
   return (
     <div className="bg-brand-bg rounded-xl p-4 lg:pb-0 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center overflow-hidden">
       {/* Right Image */}
-      <div className="flex justify-center">
+      <div className="flex justify-center overflow-hidden">
         <img
           src="/report-comp.svg"
           alt="Comprehensive Reports"
@@ -14,7 +14,7 @@ const ComprehensiveReportsCard = () => {
         />
       </div>
       {/* Left Content */}
-      <div className="text-center lg:text-left">
+      <div className="text-left">
         <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-4 sm:mb-6">
           Comprehensive Reports
         </h2>
