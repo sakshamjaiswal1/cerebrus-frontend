@@ -6,9 +6,9 @@ interface CultureCardProps {
 
 const CultureCard: React.FC<CultureCardProps> = ({ icon, title, description }) => {
     return (
-        <div className="bg-white rounded-2xl p-4 sm:p-6 flex items-center space-x-4 sm:space-x-6 shadow-sm">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center flex-shrink-0">
-                <img src={icon} alt="" className="w-6 h-6 sm:w-10 sm:h-10 xl:w-32 xl:h-32" />
+        <div className="bg-white rounded-2xl p-4 sm:p-6 flex flex-col lg:flex-row items-center space-x-4 sm:space-x-6 shadow-sm">
+            <div className="w-24 h-24 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center flex-shrink-0">
+                <img src={icon} alt="" className="w-24 h-24 sm:w-10 sm:h-10 xl:w-32 xl:h-32" />
             </div>
             <div className="flex-1">
                 <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2">{title}</h3>

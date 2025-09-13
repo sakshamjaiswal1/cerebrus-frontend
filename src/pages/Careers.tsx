@@ -5,7 +5,7 @@ import CareersHero from "../components/careers/CareersHero";
 import HiringSection from "../components/careers/HiringSection";
 import GallerySection from "../components/careers/GallerySection";
 import CultureSection from "../components/careers/CultureSection";
-import GradientCTA from "../components/careers/GradientCTA";
+import CTASection from "../components/common/CTASection";
 
 const Careers = () => {
   return (
@@ -48,7 +48,7 @@ const Careers = () => {
         <GallerySection />
         <CultureSection />
       </main>
-      <GradientCTA />
+      <CTASection />
       <Footer />
     </div>
   );
