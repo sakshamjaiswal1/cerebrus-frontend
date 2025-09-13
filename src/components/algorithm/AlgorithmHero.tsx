@@ -13,11 +13,13 @@ const AlgorithmHero = () => {
 
         {/* Image centered below content */}
         <div className="flex justify-center bg-dark-white p-4 sm:p-6 lg:p-10 rounded-2xl">
-          <img 
-            src="/algo-hero-1.svg" 
-            alt="Cerebrus Intelligence Framework" 
-            className="w-full h-auto rounded-lg"
-          />
+          <div className="w-full overflow-hidden rounded-lg">
+            <img 
+              src="/algo-hero-1.svg" 
+              alt="Cerebrus Intelligence Framework" 
+              className="w-full h-auto max-md:scale-300 max-md:h-[60vh]"
+            />
+          </div>
         </div>
       </div>
     </section>

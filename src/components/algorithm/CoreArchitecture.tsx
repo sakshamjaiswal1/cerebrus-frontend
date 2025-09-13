@@ -24,7 +24,8 @@ const CoreArchitecture = () => {
       id: 4,
       title: "Evaluation Algorithm",
       description: "At the heart of Cerebrus is an adaptive algorithm that uses AI to direct the interview by adapting to the candidate's answers in real time. It asks questions, processes responses, scores skills, and provides structured insights in real time.",
-      image: "/algo-arc-4.svg"
+      image: "/algo-arc-4.svg",
+      mobImg: '/algo-eval-mob.svg'
     },
     {
       id: 5,
@@ -68,8 +69,9 @@ const CoreArchitecture = () => {
                 <img 
                   src="/algo-arc-4.svg" 
                   alt="Evaluation Algorithm" 
-                  className="w-full h-16 sm:h-20 lg:h-24 rounded-lg object-contain"
+                  className="w-full h-16 sm:h-20 lg:h-24 rounded-lg object-contain max-md:hidden"
                 />
+                <img src="/algo-eval-mob.svg" alt="Evaluation Algorithm" className="w-9/12 rounded-lg object-contain max-md:block hidden" />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3 text-left">Evaluation Algorithm</h3>
               <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70 text-left">
