@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import CTASection from "../components/common/CTASection";
 import Footer from "../components/common/Footer";
 import Header2 from "../components/common/Header2";
 import FamiliarCustomizable from "../components/meetahuman/FamiliarCustomizable";
@@ -7,6 +6,7 @@ import MeetAHumanHero from "../components/meetahuman/MeetAHumanHero";
 import ObjectivityBuiltIn from "../components/meetahuman/ObjectivityBuiltIn";
 import ResponsiveByDesign from "../components/meetahuman/ResponsiveByDesign";
 import TheRealismLayer from "../components/meetahuman/TheRealismLayer";
+import WhiteCTASection from "../components/common/WhiteCTASection";
 
 const MeetAHuman = () => {
   return (
@@ -52,7 +52,7 @@ const MeetAHuman = () => {
         <ResponsiveByDesign />
         <ObjectivityBuiltIn />
         <FamiliarCustomizable />
-        <CTASection />
+        <WhiteCTASection />
       </main>
       <Footer />
     </div>

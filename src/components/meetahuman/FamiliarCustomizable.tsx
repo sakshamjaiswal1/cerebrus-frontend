@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useBreakpoint } from "../../hooks/useBreakPoints";
 
 const images = [
-  "/features_hero.svg",
-  "/features_hero.svg",
-  "/features_hero.svg",
-  "/features_hero.svg",
-  "/features_hero.svg",
+  "/meta-card-3.svg",
+  "/meta-card-4.svg",
+  "/meta-card-0.svg",
+  "/meta-card-1.svg",
+  "/meta-card-2.svg",
 ];
 
 const FamiliarCustomizable = () => {
@@ -49,10 +49,17 @@ const FamiliarCustomizable = () => {
   };
 
   return (
-    <section className="bg-primary py-20 overflow-x-hidden">
+    <section className="bg-primary py-20 overflow-x-hidden max-md:hidden">
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-semibold text-center text-[#A5F5ED] mb-16 italic font-serif">
-          Familiar, customizable, and designed to represent you
+        <h2 className="text-4xl font-semibold text-center text-[#A5F5ED] mb-16 italic"
+          style={{
+            fontFamily: "Georgia, serif"
+          }}
+        >
+          Familiar, customizable, <span className="font-serif text-white font-normal" style={{
+            fontStyle: "normal"
+          }}>and designed to &nbsp;</span>
+          represent you
         </h2>
         <div className="relative h-[350px] md:h-[500px] flex justify-center items-center">
           {images.map((src, index) => (
@@ -70,7 +77,6 @@ const FamiliarCustomizable = () => {
           ))}
         </div>
       </div>
-      <div className="w-full border-t-2 border-dotted border-cyan-300 opacity-50 mt-16"></div>
     </section>
   );
 };

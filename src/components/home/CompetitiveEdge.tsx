@@ -55,7 +55,7 @@ const CompetitiveEdge = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200">
-                  <td className="py-3 sm:py-6 px-2 sm:px-4 text-sm sm:text-sm sm:text-base font-medium text-primary w-1/5">
+                  <td className="py-3 sm:py-6 px-2 sm:px-4 text-sm sm:text-sm font-medium text-primary w-1/5">
                     Quality of Interview
                   </td>
                   <td className="py-3 sm:py-6 px-2 sm:px-4 text-center w-1/5">
