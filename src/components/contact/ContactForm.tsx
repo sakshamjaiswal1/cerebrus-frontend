@@ -113,11 +113,11 @@ const ContactForm = () => {
                 
                 {/* Terms */}
                 <div className="text-center">
-                  <p className="text-xs text-primary opacity-70">
+                  <p className="text-primary font-[300]">
                     By contacting us, you agree to our{" "}
-                    <a href="#" className="underline hover:opacity-80">terms of service</a>
+                    <a href="#" className="underline hover:opacity-80 font-semibold">terms of service</a>
                     {" "}and{" "}
-                    <a href="#" className="underline hover:opacity-80">privacy policy</a>
+                    <a href="#" className="underline hover:opacity-80 font-semibold">privacy policy</a>
                   </p>
                 </div>
               </form>

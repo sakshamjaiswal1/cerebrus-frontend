@@ -6,7 +6,7 @@ const ContactCards = () => {
           
           {/* Join Us Card */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
-            <div className="flex items-start space-x-4 sm:space-x-6">
+            <div className="flex items-center space-x-4 sm:space-x-6">
               
               {/* Content */}
               <div className="flex-1">
@@ -21,12 +21,15 @@ const ContactCards = () => {
                   </a>
                 </p>
               </div>
+              <div className="w-max">
+                <img src="/contact1.svg" alt="Join Us" className="w-40 h-40 max-md:w-24 max-md:h-24 object-contain" />
+              </div>
             </div>
           </div>
 
           {/* Product Support Card */}
           <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
-            <div className="flex items-start space-x-4 sm:space-x-6">
+            <div className="flex items-center space-x-4 sm:space-x-6">
               
               
               {/* Content */}
@@ -41,6 +44,9 @@ const ContactCards = () => {
                     cerebrus.info@griphic.com
                   </a>
                 </p>
+              </div>
+              <div className="w-max">
+                <img src="/contact2.svg" alt="Join Us" className="w-40 h-40 max-md:w-24 max-md:h-24 object-contain" />
               </div>
             </div>
           </div>
