@@ -31,38 +31,38 @@ const Footer = () => {
               <div className="flex justify-center space-x-4">
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200 group"
                   aria-label="Facebook"
                 >
-                  <FacebookIcon className="w-5 h-5" />
+                  <FacebookIcon className="w-5 h-5 text-primary group-hover:text-purple-400 transition-colors duration-300" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200 group"
                   aria-label="YouTube"
                 >
-                  <YouTubeIcon className="w-5 h-5" />
+                  <YouTubeIcon className="w-5 h-5 text-primary group-hover:text-cyan-300 transition-colors duration-300" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200 group"
                   aria-label="X (Twitter)"
                 >
-                  <XIcon className="w-5 h-5" />
+                  <XIcon className="w-5 h-5 text-primary group-hover:text-purple-400 transition-colors duration-300" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200 group"
                   aria-label="Instagram"
                 >
-                  <InstagramIcon className="w-5 h-5" />
+                  <InstagramIcon className="w-5 h-5 text-primary group-hover:text-cyan-300 transition-colors duration-300" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary hover:opacity-70 transition-opacity duration-200 group"
                   aria-label="LinkedIn"
                 >
-                  <LinkedInIcon className="w-5 h-5" />
+                  <LinkedInIcon className="w-5 h-5 text-primary group-hover:text-purple-400 transition-colors duration-300" />
                 </a>
               </div>
             </div>
