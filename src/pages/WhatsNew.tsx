@@ -43,7 +43,7 @@ function WhatsNew() {
         />
         <link rel="canonical" href="https://cerebrus.ai/whats-new" />
       </Helmet>
-      <main className="p-10">
+      <main className="p-10 max-md:p-5">
         <Header />
         <WhatsNewHero />
         <WhatsNextSection />

@@ -3,7 +3,7 @@ const WhatsNextSection = () => {
     <section className="w-full py-8 sm:py-12 lg:py-16">
       <div className="mx-auto px-4 sm:px-6 lg:px-0">
         <div className="bg-primary-light rounded-2xl p-4 sm:p-6 lg:p-8 mb-8 sm:mb-12 lg:mb-16">
-          <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8">
+          <div className="flex flex-col-reverse lg:flex-row items-center gap-6 sm:gap-8">
             
             {/* Left Content */}
             <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6">
@@ -28,12 +28,12 @@ const WhatsNextSection = () => {
             </div>
             
             {/* Right Image */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 py-12 max-md:py-0">
               <div className="rounded-xl overflow-hidden">
                 <img 
                   src="/whats_new_hero.svg" 
                   alt="Siddhant Bansal, CEO@Griphic"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover lg:max-h-112 max-md:h-96"
                 />
               </div>
             </div>
