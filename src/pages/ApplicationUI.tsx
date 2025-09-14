@@ -28,7 +28,7 @@ function ApplicationUI() {
             "One-click navigation to critical tasks like candidate feedback, job creation, and team updates.",
         },
       ],
-      image: "/exp_img_1.svg",
+      image: "/app1.svg",
       imageAlt: "Intuitive Dashboard Interface",
     },
     {
@@ -37,18 +37,18 @@ function ApplicationUI() {
         "Effortlessly track and evaluate candidates with a dynamic, color-coded interface.",
       features: [
         {
-          title: "Green: Exceptional candidates, excelling in specific skills.",
-          description: "",
+          title: "Green",
+          description: " Exceptional candidates, excelling in specific skills.",
         },
         {
           title:
-            "Yellow: Average performers, showing moderate skill proficiency.",
-          description: "",
+            "Yellow",
+          description: " Average performers, showing moderate skill proficiency.",
         },
         {
           title:
-            "Red: Candidates with below-average performance in a particular skill.",
-          description: "",
+            "Red",
+          description: " Candidates with below-average performance in a particular skill.",
         },
         {
           title: "Detailed Profiles",
@@ -56,7 +56,7 @@ function ApplicationUI() {
             "Access each candidate's assessments, interview recordings, and reports.",
         },
       ],
-      image: "/exp_img_2.svg",
+      image: "/app2.svg",
       imageAlt: "Interviewed Candidates Overview Interface",
     },
     {
@@ -74,7 +74,7 @@ function ApplicationUI() {
             "Setting the order of the lists by name, performance score, notice period, and more with one click.",
         },
       ],
-      image: "/exp_img_3.svg",
+      image: "/app3.svg",
       imageAlt: "Configurable Group Sorting Interface",
     },
     {
@@ -93,7 +93,7 @@ function ApplicationUI() {
             "Export or share specific sections within the app to align with your team instantly.",
         },
       ],
-      image: "/exp_img_4.svg",
+      image: "/app4.svg",
       imageAlt: "Detailed Interview Reports Interface",
     },
     {
@@ -117,7 +117,7 @@ function ApplicationUI() {
             "Links to past interviews and you get references for each candidate, with access to previous reports.",
         },
       ],
-      image: "/exp_img_5.svg",
+      image: "/app5.svg",
       imageAlt: "Integrated Chat Interface",
     },
   ];
@@ -158,7 +158,7 @@ function ApplicationUI() {
         />
         <link rel="canonical" href="https://cerebrus.ai/application-ui" />
       </Helmet>
-      <main className="p-10">
+      <main className="p-10 max-md:p-5">
         <Header />
         <ApplicationUIHero />
         {sections.map((section, index) => (
