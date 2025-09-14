@@ -73,31 +73,31 @@ const Footer = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="/how-to-use" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Watch Demo
               </Link>
               <Link 
                 to="/our-concept" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Our Concept
               </Link>
               <Link 
                 to="/algorithm" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Framework
               </Link>
               <Link 
                 to="/meet-a-human" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 MetaHuman
               </Link>
               <Link 
                 to="/application-ui" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Platform
               </Link>
@@ -110,19 +110,19 @@ const Footer = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="/how-to-use" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Getting Started
               </Link>
               <Link 
                 to="/blog" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Blog
               </Link>
               <Link 
                 to="/whats-new" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 What's New
               </Link>
@@ -135,19 +135,19 @@ const Footer = () => {
             <nav className="flex flex-col space-y-4">
               <Link 
                 to="/about" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 About
               </Link>
               <Link 
                 to="/careers" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Careers
               </Link>
               <Link 
                 to="/contact" 
-                className="text-primary hover:opacity-70 transition-opacity duration-200"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out"
               >
                 Contact Us
               </Link>
