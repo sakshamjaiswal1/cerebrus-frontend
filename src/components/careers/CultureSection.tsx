@@ -7,12 +7,12 @@ interface CultureCardProps {
 const CultureCard: React.FC<CultureCardProps> = ({ icon, title, description }) => {
     return (
         <div className="bg-white rounded-2xl p-4 sm:p-6 flex flex-col lg:flex-row items-center space-x-4 sm:space-x-6 shadow-sm">
-            <div className="w-24 h-24 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="w-24 h-24 sm:w-40 sm:h-40 rounded-lg flex items-center justify-center flex-shrink-0">
                 <img src={icon} alt="" className="w-24 h-24 sm:w-10 sm:h-10 xl:w-32 xl:h-32" />
             </div>
             <div className="flex-1">
                 <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2">{title}</h3>
-                <p className="text-sm sm:text-base text-gray-500 leading-relaxed">{description}</p>
+                <p className="text-sm sm:text-base text-primary font-[300] leading-relaxed">{description}</p>
             </div>
         </div>
     )
@@ -46,7 +46,7 @@ const CultureSection = () => {
     return (
         <section className="mb-12 sm:mb-16 lg:mb-24">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-primary mb-3 sm:mb-4">A Culture of Fairness and Simplicity</h2>
-            <p className="text-sm sm:text-base text-gray-500 mb-6 sm:mb-8 max-w-3xl leading-relaxed">Our culture wasn't written first, it came out of how we work, by figuring things out, fixing what was broken, and helping each other get better. It's practical, honest, and still evolving.</p>
+            <p className="text-sm sm:text-base lg:text-xl text-primary font-[300] mb-6 sm:mb-8 w-full leading-relaxed">Our culture wasn't written first, it came out of how we work, by figuring things out, fixing what was broken, and helping each other get better. It's practical, honest, and still evolving.</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {cultureItems.map((item, index) => (
                     <CultureCard key={index} icon={item.icon} title={item.title} description={item.description} />

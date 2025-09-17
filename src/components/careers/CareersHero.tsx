@@ -21,7 +21,7 @@ const CareersHero = () => {
                 </a>
             </div>
             <div className="w-full lg:w-1/2">
-                <img src="/career-hero.svg" alt="Career illustration" className="w-full h-auto object-contain" />
+                <img src="/career-hero.svg" alt="Career illustration" className="w-full h-auto object-contain hover:scale-105 transition-all duration-200" />
             </div>
         </div>
       </section>
