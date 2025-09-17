@@ -6,7 +6,7 @@ const FeaturesHero = () => {
       <div className="mx-auto">
         <GradientText text="Features" />
 
-        <p className="text-sm sm:text-base leading-relaxed text-primary opacity-70">
+        <p className="text-lg sm:text-xl leading-relaxed text-primary opacity-90">
           Hiring can feel like a race against time. Too many applications and
           not enough hours in the day. Cerebrus helps you keep up, without
           losing depth, fairness, or control.

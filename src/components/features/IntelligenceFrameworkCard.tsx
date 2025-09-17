@@ -8,7 +8,7 @@ const IntelligenceFrameworkCard = () => {
         <img
           src="/int-fram.svg"
           alt="Intelligence Framework"
-          className="w-full h-auto rounded-lg"
+          className="w-full h-auto rounded-lg hover:scale-105 transition-all duration-300"
         />
       </div>
 
