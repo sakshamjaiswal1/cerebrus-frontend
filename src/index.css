@@ -135,3 +135,38 @@
     display: flex;
   }
 }
+
+/* Wobbly dropdown animations */
+@keyframes wobblyScale {
+  0% {
+    transform: scale(0) rotate(-3deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(0.95) rotate(-0.5deg);
+    opacity: 0.9;
+  }
+  85% {
+    transform: scale(1.02) rotate(0.2deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInOption {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
