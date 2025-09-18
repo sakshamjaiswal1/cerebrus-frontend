@@ -57,12 +57,12 @@ const TheRealismLayer = () => {
           </div>
           <div className="lg:w-1/2">
             <img
-              src="/meta-1.svg"
+              src="/meta-1.png"
               alt="The Realism Layer"
               className="w-full h-auto object-cover rounded-2xl max-md:hidden"
             />
              <img
-              src="/meta-1-mob.svg"
+              src="/meta-1-mob.png"
               alt="The Realism Layer"
               className="w-full h-auto object-cover rounded-2xl max-md:block hidden"
             />

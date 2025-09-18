@@ -2,11 +2,11 @@ import AnimatedButton from "../common/AnimatedButton";
 
 const GallerySection = () => {
     const images = [
-        "/gall-1.svg",
-        "/gall-2.svg",
-        "/gall-3.svg",
-        "/gall-4.svg",
-        "/gall-5.svg",
+        "/gall-1.png",
+        "/gall-2.png",
+        "/gall-3.png",
+        "/gall-4.png",
+        "/gall-5.png",
     ];
 
     return (

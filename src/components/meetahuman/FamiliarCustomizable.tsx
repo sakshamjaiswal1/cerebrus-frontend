@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useBreakpoint } from "../../hooks/useBreakPoints";
 
 const images = [
-  "/meta-card-3.svg",
-  "/meta-card-4.svg",
-  "/meta-card-0.svg",
-  "/meta-card-1.svg",
-  "/meta-card-2.svg",
+  "/meta-card-3.png",
+  "/meta-card-4.png",
+  "/meta-card-0.png",
+  "/meta-card-1.png",
+  "/meta-card-2.png",
 ];
 
 const FamiliarCustomizable = () => {

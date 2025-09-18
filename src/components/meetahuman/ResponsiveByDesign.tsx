@@ -37,7 +37,7 @@ const ResponsiveByDesign = () => {
           </div>
           <div className="lg:w-1/2">
             <img
-              src="/meta-2.svg"
+              src="/meta-2.png"
               alt="Responsive By Design"
               className="w-full h-auto object-cover rounded-2xl"
             />

@@ -18,7 +18,7 @@ const MeetAHumanHero = () => {
         </p>
         <div className="relative px-4 sm:px-6 lg:px-0 w-full overflow-hidden max-md:h-[60vh] rounded-2xl">
           <img
-            src="/Metahuman.svg"
+            src="/Metahuman.png"
             alt="MetaHuman Interviewer"
             className="h-full object-fill w-full mx-auto max-md:scale-300"
           />
