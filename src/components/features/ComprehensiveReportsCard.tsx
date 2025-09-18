@@ -10,7 +10,7 @@ const ComprehensiveReportsCard = () => {
         <img
           src="/report-comp.svg"
           alt="Comprehensive Reports"
-          className="w-full h-auto rounded-t-lg -mb-[30%]"
+          className="w-full h-auto rounded-t-lg -mb-[30%] hover:scale-110 transition-all duration-300"
         />
       </div>
       {/* Left Content */}

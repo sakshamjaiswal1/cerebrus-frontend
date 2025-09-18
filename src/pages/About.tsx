@@ -7,6 +7,7 @@ import VisionSection from "../components/about/VisionSection";
 import EventsSection from "../components/about/EventsSection";
 import TeamSection from "../components/about/TeamSection";
 import RecentUpdatesSection from "../components/about/RecentUpdatesSection";
+import { SlideBottomTopWrapper, SlideLeftRightWrapper, SlideTopBottomWrapper } from "../components/common/wrapper";
 
 function About() {
   return (
@@ -46,13 +47,27 @@ function About() {
         <link rel="canonical" href="https://cerebrus.ai/about" />
       </Helmet>
       <main className="px-4 sm:px-6 lg:px-20">
-        <Header isHome={false} />
-        <AboutHero />
-        <VisionSection />
-        <EventsSection />
-        <TeamSection />
-        <RecentUpdatesSection />
-        <CTASection />
+        <SlideTopBottomWrapper>
+          <Header isHome={false} />
+        </SlideTopBottomWrapper>
+        <SlideBottomTopWrapper>
+          <AboutHero />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <VisionSection />
+        </SlideBottomTopWrapper>
+        <SlideLeftRightWrapper>
+          <EventsSection />
+        </SlideLeftRightWrapper>
+        <SlideLeftRightWrapper>
+          <TeamSection />
+        </SlideLeftRightWrapper>
+        <SlideLeftRightWrapper>
+          <RecentUpdatesSection />
+        </SlideLeftRightWrapper>
+        <SlideBottomTopWrapper>
+          <CTASection />
+        </SlideBottomTopWrapper>
         <Footer />
       </main>
     </div>

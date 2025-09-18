@@ -7,6 +7,7 @@ import MetaHumanCard from "../components/features/MetaHumanCard";
 import ComprehensiveReportsCard from "../components/features/ComprehensiveReportsCard";
 import IntuiteDashboardCard from "../components/features/IntuiteDashboardCard";
 import IntelligenceFrameworkCard from "../components/features/IntelligenceFrameworkCard";
+import { ScaleInWrapper, SlideBottomTopWrapper, SlideTopBottomWrapper } from "../components/common/wrapper";
 
 function Features() {
   return (
@@ -45,15 +46,27 @@ function Features() {
         <link rel="canonical" href="https://cerebrus.ai/features" />
       </Helmet>
       <main className="p-4 sm:p-6 lg:p-10">
-        <Header />
-        <FeaturesHero />
+        <SlideTopBottomWrapper>
+          <Header />
+        </SlideTopBottomWrapper>
+        <SlideBottomTopWrapper>
+          <FeaturesHero />
+        </SlideBottomTopWrapper>
 
         {/* Feature Cards with proper spacing */}
         <div className="space-y-8 sm:space-y-12 lg:space-y-16">
-          <MetaHumanCard />
-          <ComprehensiveReportsCard />
-          <IntuiteDashboardCard />
-          <IntelligenceFrameworkCard />
+          <SlideBottomTopWrapper>
+            <MetaHumanCard />
+          </SlideBottomTopWrapper>
+          <SlideBottomTopWrapper>
+            <ComprehensiveReportsCard />
+          </SlideBottomTopWrapper>
+          <SlideBottomTopWrapper>
+            <IntuiteDashboardCard />
+          </SlideBottomTopWrapper>
+          <ScaleInWrapper>
+            <IntelligenceFrameworkCard />
+          </ScaleInWrapper>
         </div>
         <CTASection />
         <Footer />

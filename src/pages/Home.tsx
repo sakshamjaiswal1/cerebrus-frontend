@@ -7,6 +7,7 @@ import ExtensiveResearch from "../components/home/ExtensiveResearch";
 import CompetitiveEdge from "../components/home/CompetitiveEdge";
 import Footer from "../components/common/Footer";
 import CTASection from "../components/home/CTASection";
+import { SlideBottomTopWrapper, SlideTopBottomWrapper } from "../components/common/wrapper";
 
 function Home() {
   return (
@@ -46,13 +47,25 @@ function Home() {
         <link rel="canonical" href="https://cerebrus.ai" />
       </Helmet>
       <main className="p-4 sm:p-6 lg:p-10">
-        <Header />
+        <SlideTopBottomWrapper>
+          <Header />
+        </SlideTopBottomWrapper>
         <HeroSection />
-        <FeaturesSection />
-        <ExtensiveResearch />
-        <Experience />
-        <CompetitiveEdge />
-        <CTASection />
+        <SlideBottomTopWrapper>
+          <FeaturesSection />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <Experience />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <ExtensiveResearch />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <CompetitiveEdge />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <CTASection />
+        </SlideBottomTopWrapper>
         <Footer />
       </main>
     </div>
