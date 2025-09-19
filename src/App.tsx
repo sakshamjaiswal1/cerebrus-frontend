@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Features from "./pages/Features";
@@ -78,12 +75,14 @@ const router = createBrowserRouter([
   {
     path: "/our-concept",
     element: <OurConcept />,
-  }
+  },
 ]);
 function App() {
   return (
-    <RouterProvider router={router} />
-  )
+    <div className="max-w-[1440px] mx-auto">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -7,7 +7,10 @@ import ExtensiveResearch from "../components/home/ExtensiveResearch";
 import CompetitiveEdge from "../components/home/CompetitiveEdge";
 import Footer from "../components/common/Footer";
 import CTASection from "../components/home/CTASection";
-import { SlideBottomTopWrapper, SlideTopBottomWrapper } from "../components/common/wrapper";
+import {
+  SlideBottomTopWrapper,
+  SlideTopBottomWrapper,
+} from "../components/common/wrapper";
 
 function Home() {
   return (
@@ -56,11 +59,12 @@ function Home() {
         <SlideBottomTopWrapper>
           <FeaturesSection />
         </SlideBottomTopWrapper>
-        <SlideBottomTopWrapper>
-          <Experience />
-        </SlideBottomTopWrapper>
+
         <SlideBottomTopWrapper>
           <ExtensiveResearch />
+        </SlideBottomTopWrapper>
+        <SlideBottomTopWrapper>
+          <Experience />
         </SlideBottomTopWrapper>
         <SlideBottomTopWrapper>
           <CompetitiveEdge />

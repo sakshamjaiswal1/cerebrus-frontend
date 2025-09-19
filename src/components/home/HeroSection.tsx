@@ -45,7 +45,7 @@ const HeroSection = () => {
       </SlideLeftRightWrapper>
 
       {/* Right Animation Section */}
-      <SlideRightLeftWrapper className="w-full lg:w-1/2 flex justify-center lg:border lg:border-gray-300 bg-white mt-6 lg:mt-0 lg:h-[90vh]">
+      <SlideRightLeftWrapper className="w-full lg:w-1/2 flex justify-center  bg-white mt-6 lg:mt-0 lg:h-[90vh]">
         <RectangleAnimation />
       </SlideRightLeftWrapper>
     </div>
