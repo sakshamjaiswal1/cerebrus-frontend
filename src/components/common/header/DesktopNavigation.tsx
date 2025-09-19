@@ -1,9 +1,23 @@
 import { Link } from "react-router";
-import GradientTextSmall from "../GradientTextSmall";
 import AnimatedButton from "../AnimatedButton";
 import DarkAnimatedButton from "../DarkAnimatedButton";
+import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 const DesktopNavigation = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 })
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    if (isDropdownOpen && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect()
+      setDropdownPosition({
+        top: rect.bottom + 8,
+        left: rect.left
+      })
+    }
+  }, [isDropdownOpen])
   return (
     <>
       {/* Desktop Navigation Menu */}
@@ -29,10 +43,13 @@ const DesktopNavigation = () => {
         >
           Features
         </Link>
-        <div className="relative group">
+        <div className="relative">
           <button
+            ref={buttonRef}
             className="flex items-center space-x-1 text-base font-medium transition-colors duration-200 hover:opacity-70"
             style={{ color: "#1A323C" }}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            onMouseEnter={() => setIsDropdownOpen(true)}
           >
             <span>Resources</span>
             {/* Dropdown Arrow */}
@@ -42,7 +59,7 @@ const DesktopNavigation = () => {
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="transition-transform duration-200 group-hover:rotate-180"
+              className="transition-transform duration-200 hover:rotate-180"
             >
               <path
                 d="M3 4.5L6 7.5L9 4.5"
@@ -54,45 +71,45 @@ const DesktopNavigation = () => {
             </svg>
           </button>
 
-          {/* Dropdown Menu */}
-          <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-            <div className="py-2">
+        </div>
+
+        {/* Dropdown Menu - Rendered as Portal */}
+        {isDropdownOpen && createPortal(
+          <div 
+            className="fixed w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-[999999999]"
+            style={{
+              top: dropdownPosition.top,
+              left: dropdownPosition.left
+            }}
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <div className="py-2 flex flex-col space-y-4">
               <Link
                 to="/how-to-use"
-                className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
+                onClick={() => setIsDropdownOpen(false)}
               >
-                <span className="text-primary group-hover/item:hidden">
-                  How to use
-                </span>
-                <span className="hidden group-hover/item:block">
-                  <GradientTextSmall text="How to use" />
-                </span>
+                How to use
               </Link>
               <Link
                 to="/whats-new"
-                className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
+                onClick={() => setIsDropdownOpen(false)}
               >
-                <span className="text-primary group-hover/item:hidden">
-                  Whats new
-                </span>
-                <span className="hidden group-hover/item:block">
-                  <GradientTextSmall text="Whats new" />
-                </span>
+                Whats new
               </Link>
               <Link
                 to="/blog"
-                className="group/item block px-4 py-3 text-sm transition-all duration-200 hover:bg-gray-100"
+                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
+                onClick={() => setIsDropdownOpen(false)}
               >
-                <span className="text-primary group-hover/item:hidden">
-                  Blog
-                </span>
-                <span className="hidden group-hover/item:block">
-                  <GradientTextSmall text="Blog" />
-                </span>
+                Blog
               </Link>
             </div>
-          </div>
-        </div>
+          </div>,
+          document.body
+        )}
         <div className="flex items-center space-x-4">
           {/* Get Started Button */}
           <DarkAnimatedButton text="Get Started" />

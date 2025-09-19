@@ -50,7 +50,9 @@ function Home() {
         <SlideTopBottomWrapper>
           <Header />
         </SlideTopBottomWrapper>
-        <HeroSection />
+        <SlideBottomTopWrapper>
+          <HeroSection />
+        </SlideBottomTopWrapper>
         <SlideBottomTopWrapper>
           <FeaturesSection />
         </SlideBottomTopWrapper>
