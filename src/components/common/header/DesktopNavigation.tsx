@@ -75,7 +75,7 @@ const DesktopNavigation = () => {
 
         {/* Dropdown Menu - Rendered as Portal */}
         {isDropdownOpen && createPortal(
-          <div 
+          <div
             className="fixed w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-[999999999]"
             style={{
               top: dropdownPosition.top,
@@ -84,28 +84,34 @@ const DesktopNavigation = () => {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <div className="py-2 flex flex-col space-y-4">
-              <Link
-                to="/how-to-use"
-                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                How to use
-              </Link>
-              <Link
-                to="/whats-new"
-                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Whats new
-              </Link>
-              <Link
-                to="/blog"
-                className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out px-4 text-sm"
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                Blog
-              </Link>
+            <div className="py-2 flex flex-col space-y-1 font-semibold overflow-x-hidden">
+              <div className="py-2 hover:bg-brand-bg rounded-lg hover:translate-x-2 transition-all duration-300 ease-in-out">
+                <Link
+                  to="/how-to-use"
+                  className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent transition-all duration-300 ease-in-out px-4 text-md"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  How to use
+                </Link>
+              </div>
+              <div className="py-2 hover:bg-brand-bg rounded-lg hover:translate-x-2 transition-all duration-300 ease-in-out">
+                <Link
+                  to="/whats-new"
+                  className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent transition-all duration-300 ease-in-out px-4 text-md"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  Whats new
+                </Link>
+              </div>
+              <div className="py-2 hover:bg-brand-bg rounded-lg hover:translate-x-2 transition-all duration-300 ease-in-out">
+                <Link
+                  to="/blog"
+                  className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent transition-all duration-300 ease-in-out px-4 text-md"
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  Blog
+                </Link>
+              </div>
             </div>
           </div>,
           document.body
