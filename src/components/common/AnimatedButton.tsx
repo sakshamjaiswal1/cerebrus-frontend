@@ -16,7 +16,7 @@ const AnimatedButton = ({
     >
       {/* Sliding background */}
       <div
-        className="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"
+        className="absolute inset-0 transform -translate-x-[102%] group-hover:translate-x-0 transition-transform duration-300 ease-out"
         style={{
           background: "linear-gradient(90deg, #8BD6CE 0%, #BD9AE3 100%)",
         }}

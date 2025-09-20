@@ -10,7 +10,7 @@ interface MobileMenuProps {
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
     <div
-      className={`sm:hidden fixed inset-0 z-50 transition-all duration-300 ${
+      className={`lg:hidden fixed inset-0 z-50 h-[100dvh] transition-all duration-300 ${
         isOpen
           ? "opacity-100 visible"
           : "opacity-0 invisible pointer-events-none"
