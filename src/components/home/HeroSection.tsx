@@ -2,11 +2,14 @@ import RectangleAnimation from "../common/RectangleAnimation";
 import WatchVideoButton from "../common/WatchVideoButton";
 import AnimatedText from "../common/AnimatedText";
 import ScrollingText from "../common/ScrollingText";
-import { SlideLeftRightWrapper, SlideRightLeftWrapper } from "../common/wrapper";
+import {
+  SlideLeftRightWrapper,
+  SlideRightLeftWrapper,
+} from "../common/wrapper";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row items-start justify-between w-full lg:rounded-tl-xl ">
+    <div className=" flex flex-col-reverse lg:flex-row items-start justify-between w-full lg:rounded-tl-xl mt-[16px]">
       {/* Left Content Section */}
       <SlideLeftRightWrapper className="w-full lg:w-1/2">
         <div className="bg-brand-bg lg:rounded-tl-xl  rounded-xl py-8 px-6 sm:py-12 sm:px-8 lg:py-16 lg:pl-12">
@@ -45,7 +48,7 @@ const HeroSection = () => {
       </SlideLeftRightWrapper>
 
       {/* Right Animation Section */}
-      <SlideRightLeftWrapper className="w-full lg:w-1/2 flex justify-center  bg-white mt-6 lg:mt-0 lg:h-[90vh]">
+      <SlideRightLeftWrapper className="w-full lg:w-1/2 flex justify-center  bg-white  lg:mt-0 lg:h-[90vh]">
         <RectangleAnimation />
       </SlideRightLeftWrapper>
     </div>
