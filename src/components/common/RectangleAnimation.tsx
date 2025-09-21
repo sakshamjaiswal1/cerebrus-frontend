@@ -70,7 +70,7 @@ const RectangleAnimation = () => {
   }, [isSm, isMd, isLg]);
   return (
     <div
-      className="scale-75 sm:scale-90 lg:scale-100 w-full h-full flex items-center justify-center"
+      className="scale-100  lg:scale-100 w-full h-full flex items-center justify-center"
       id="rect-anim"
     >
       <div className="container">

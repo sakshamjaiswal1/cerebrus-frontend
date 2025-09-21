@@ -19,7 +19,7 @@ const TeamCard = ({
 
   return (
     <div
-      className={`relative w-full max-w-64 h-72 sm:h-80 perspective-1000 ${className}`}
+      className={`relative w-full max-w-[268px] h-[444px] sm:h-[444px] perspective-1000 ${className}`}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -40,7 +40,7 @@ const TeamCard = ({
           </div>
 
           {/* Info Section */}
-          <div className="h-1/4 p-3 sm:p-4 flex flex-col justify-center">
+          <div className="h-1/4 p-[24px]  flex flex-col justify-center">
             <h3 className="text-base sm:text-lg font-semibold text-primary text-center">
               {name}
             </h3>

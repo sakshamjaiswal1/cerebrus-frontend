@@ -1,65 +1,68 @@
-import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 
 interface SlideTopBottomWrapperProps {
-  children: ReactNode
-  className?: string
+  children: ReactNode;
+  className?: string;
 }
 
-const SlideTopBottomWrapper = ({ children, className }: SlideTopBottomWrapperProps) => {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+const SlideTopBottomWrapper = ({
+  children,
+  className,
+}: SlideTopBottomWrapperProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
       {
         threshold: 0.3,
-        rootMargin: '0px 0px 0px 0px'
+        rootMargin: "0px 0px 0px 0px",
       }
-    )
+    );
 
     if (ref.current) {
-      observer.observe(ref.current)
+      observer.observe(ref.current);
     }
 
     // Trigger animation immediately if element is already visible
     const checkVisibility = () => {
       if (ref.current) {
-        const rect = ref.current.getBoundingClientRect()
+        const rect = ref.current.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       }
-    }
-    
+    };
+
     // Check immediately after mount
-    setTimeout(checkVisibility, 100)
+    setTimeout(checkVisibility, 100);
 
     return () => {
       if (ref.current) {
-        observer.unobserve(ref.current)
+        observer.unobserve(ref.current);
       }
-    }
-  }, [])
+    };
+  }, []);
 
   return (
-    <div ref={ref} className={`${className || ''}`}>
-      <div 
+    <div ref={ref} className={`${className || ""}`}>
+      <div
         className={`transition-all duration-700 ease-out ${
-          isVisible 
-            ? 'transform translate-y-0 opacity-100' 
-            : 'transform -translate-y-8 opacity-0'
+          isVisible
+            ? "slide-in-visible opacity-100"
+            : "slide-in-hidden opacity-0"
         }`}
       >
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SlideTopBottomWrapper
+export default SlideTopBottomWrapper;

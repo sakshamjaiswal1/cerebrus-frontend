@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const FeaturesSection = () => {
   const features = [
@@ -34,12 +34,14 @@ const FeaturesSection = () => {
 
   const [activeIndex, setActiveIndex] = useState(1); // Start with MetaHuman (center)
 
+  const intervelRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
   useEffect(() => {
-    const interval = setInterval(() => {
+    intervelRef.current = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
     }, 4000); // Change every 4 seconds
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervelRef.current!);
   }, [features.length]);
 
   const getCardPosition = (index: number) => {
@@ -55,7 +57,7 @@ const FeaturesSection = () => {
 
     // Center card (focused)
     if (diff === 0) {
-      return "translate-x-0 scale-100 z-20 blur-0";
+      return "translate-x-0 scale-100 z-20 blur-0 ";
     }
     // Left card
     else if (diff === -1) {
@@ -80,12 +82,16 @@ const FeaturesSection = () => {
             {features.map((feature, index) => (
               <button
                 key={feature.id}
-                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-base transition-all duration-500 ${
+                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full font-medium text-xs sm:text-base transition-all duration-500 pointer ${
                   index === activeIndex
                     ? "text-white shadow-md bg-primary"
                     : "text-gray-600 hover:text-gray-800"
                 }`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => {
+                  setActiveIndex(index);
+
+                  clearInterval(intervelRef.current!);
+                }}
               >
                 {feature.id === "proctoring" && "Proctoring"}
                 {feature.id === "metahuman" && "MetaHuman"}

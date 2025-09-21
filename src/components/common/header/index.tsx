@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import HamburgerButton from "./HamburgerButton";
 import MobileMenu from "./MobileMenu";
 import DesktopNavigation from "./DesktopNavigation";
+import CerebrusLogo from "../../../assets/logo/cerebrus.svg?react";
 
 const Header = ({ isHome = false }: { isHome?: boolean }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,16 +28,12 @@ const Header = ({ isHome = false }: { isHome?: boolean }) => {
   return (
     <header className="w-full">
       <div className="flex items-center justify-between">
-        {/* Logo Section */}
-        <div className="flex items-center bg-white rounded-xl p-2 w-1/12 h-full">
-          <Link to="/">
-            <img
-              src="/Cerebrus_Logo.svg"
-              alt="Cerebrus"
-              className="h-full w-full  min-w-[81px]"
-            />
-          </Link>
-        </div>
+        <Link
+          to="/"
+          className="   w-[81px]   h-[48px]  lg:h-[72px]   lg:w-[124px]"
+        >
+          <CerebrusLogo className="w-full  h-full" />
+        </Link>
 
         <div
           className={`flex w-11/12 justify-end p-4 py-2 ${

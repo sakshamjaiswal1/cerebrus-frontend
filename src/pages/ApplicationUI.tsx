@@ -41,14 +41,14 @@ function ApplicationUI() {
           description: " Exceptional candidates, excelling in specific skills.",
         },
         {
-          title:
-            "Yellow",
-          description: " Average performers, showing moderate skill proficiency.",
+          title: "Yellow",
+          description:
+            " Average performers, showing moderate skill proficiency.",
         },
         {
-          title:
-            "Red",
-          description: " Candidates with below-average performance in a particular skill.",
+          title: "Red",
+          description:
+            " Candidates with below-average performance in a particular skill.",
         },
         {
           title: "Detailed Profiles",
@@ -124,56 +124,61 @@ function ApplicationUI() {
 
   return (
     <div className="bg-white">
-      <Helmet>
-        <title>
-          Application UI - Cerebrus AI Interview Platform | User Interface &
-          Experience
-        </title>
-        <meta
-          name="description"
-          content="Explore Cerebrus intuitive application interface featuring dashboard analytics, candidate management, detailed reports, and integrated communication tools for seamless hiring workflows."
-        />
-        <meta
-          name="keywords"
-          content="interview platform UI, hiring dashboard, candidate management interface, interview reports UI, recruitment software interface"
-        />
-        <meta
-          property="og:title"
-          content="Cerebrus Application UI - Intuitive Interview Platform Interface"
-        />
-        <meta
-          property="og:description"
-          content="Discover the user-friendly interface of Cerebrus AI interview platform with advanced dashboard, candidate management, and reporting features."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://cerebrus.ai/application-ui" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Cerebrus Application UI - Interview Platform Interface"
-        />
-        <meta
-          name="twitter:description"
-          content="Experience the intuitive interface of our AI interview platform."
-        />
-        <link rel="canonical" href="https://cerebrus.ai/application-ui" />
-      </Helmet>
-      <main className="p-10 max-md:p-5">
-        <Header />
-        <ApplicationUIHero />
-        {sections.map((section, index) => (
-          <FeatureSection
-            key={index}
-            title={section.title}
-            description={section.description}
-            features={section.features}
-            image={section.image}
-            imageAlt={section.imageAlt}
+      <div className="max-w-[1440px] mx-auto">
+        <Helmet>
+          <title>
+            Application UI - Cerebrus AI Interview Platform | User Interface &
+            Experience
+          </title>
+          <meta
+            name="description"
+            content="Explore Cerebrus intuitive application interface featuring dashboard analytics, candidate management, detailed reports, and integrated communication tools for seamless hiring workflows."
           />
-        ))}
-        <CTASection />
-        <Footer />
-      </main>
+          <meta
+            name="keywords"
+            content="interview platform UI, hiring dashboard, candidate management interface, interview reports UI, recruitment software interface"
+          />
+          <meta
+            property="og:title"
+            content="Cerebrus Application UI - Intuitive Interview Platform Interface"
+          />
+          <meta
+            property="og:description"
+            content="Discover the user-friendly interface of Cerebrus AI interview platform with advanced dashboard, candidate management, and reporting features."
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content="https://cerebrus.ai/application-ui"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="Cerebrus Application UI - Interview Platform Interface"
+          />
+          <meta
+            name="twitter:description"
+            content="Experience the intuitive interface of our AI interview platform."
+          />
+          <link rel="canonical" href="https://cerebrus.ai/application-ui" />
+        </Helmet>
+        <main className="p-10 max-md:p-5">
+          <Header />
+          <ApplicationUIHero />
+          {sections.map((section, index) => (
+            <FeatureSection
+              key={index}
+              title={section.title}
+              description={section.description}
+              features={section.features}
+              image={section.image}
+              imageAlt={section.imageAlt}
+            />
+          ))}
+          <CTASection />
+          <Footer />
+        </main>
+      </div>
     </div>
   );
 }
