@@ -12,7 +12,7 @@ const HamburgerButton = ({
   return (
     <button
       onClick={onClick}
-      className="sm:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+      className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
       aria-label="Toggle mobile menu"
     >
       <span
