@@ -38,7 +38,7 @@ const TeamSection = () => {
 
   return (
     <section className="w-full py-8 sm:py-12 lg:py-16 bg-white">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-0 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-6 sm:mb-8">
           The Minds Behind the Mission
         </h2>
