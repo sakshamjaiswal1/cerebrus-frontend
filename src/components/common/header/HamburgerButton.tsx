@@ -4,7 +4,11 @@ interface HamburgerButtonProps {
   isMeetHuman?: boolean;
 }
 
-const HamburgerButton = ({ isOpen, onClick,isMeetHuman }: HamburgerButtonProps) => {
+const HamburgerButton = ({
+  isOpen,
+  onClick,
+  isMeetHuman,
+}: HamburgerButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -12,17 +16,21 @@ const HamburgerButton = ({ isOpen, onClick,isMeetHuman }: HamburgerButtonProps) 
       aria-label="Toggle mobile menu"
     >
       <span
-        className={`block w-6 h-0.5 ${isMeetHuman ? "bg-white" : "bg-primary"} transition-all duration-300 ${
-          isOpen ? "rotate-45 translate-y-2" : "" 
+        className={`block w-6 h-0.5 ${
+          isMeetHuman ? "bg-white" : "bg-primary"
+        } transition-all duration-300 ${
+          isOpen ? "rotate-45 translate-y-2" : ""
         }`}
       />
       <span
-        className={`block w-6 h-0.5 ${isMeetHuman ? "bg-white" : "bg-primary"} transition-all duration-300 ${
-          isOpen ? "opacity-0" : ""
-        }`}
+        className={`block w-6 h-0.5 ${
+          isMeetHuman ? "bg-white" : "bg-primary"
+        } transition-all duration-300 ${isOpen ? "opacity-0" : ""}`}
       />
       <span
-        className={`block w-6 h-0.5 bg-primary ${isMeetHuman ? "bg-white" : "bg-primary"} transition-all duration-300 ${
+        className={`block w-6 h-0.5 bg-primary ${
+          isMeetHuman ? "bg-white" : "bg-primary"
+        } transition-all duration-300 ${
           isOpen ? "-rotate-45 -translate-y-2" : ""
         }`}
       />

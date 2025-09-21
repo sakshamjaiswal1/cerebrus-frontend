@@ -169,3 +169,16 @@
     opacity: 1;
   }
 }
+
+/* Slide Top Bottom Animation - No Stacking Context */
+.slide-in-visible {
+  position: relative;
+  top: 0;
+  transition: top 0.7s ease-out;
+}
+
+.slide-in-hidden {
+  position: relative;
+  top: -2rem;
+  transition: top 0.7s ease-out;
+}
