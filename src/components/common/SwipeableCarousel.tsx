@@ -12,7 +12,6 @@ interface CarouselItem {
 interface SwipeableCarouselProps {
   items: CarouselItem[];
   autoPlayInterval?: number;
-  cardBackground?: string;
   className?: string;
   showButton?: boolean;
   descClassName?: string;
@@ -22,7 +21,6 @@ interface SwipeableCarouselProps {
 const SwipeableCarousel = ({
   items,
   autoPlayInterval = 1000,
-  cardBackground = "bg-white",
   className = "",
   showButton = false,
   descClassName = "",
@@ -79,29 +77,35 @@ const SwipeableCarousel = ({
         {items.map((item) => (
           <div
             key={item.id}
-            className={` w-[408px] ${cardBackground} rounded-2xl   p-[24px]`}
+            className="w-[408px] p-[24px] rounded-[20px] border border-[#F7F7F7]"
+            style={{
+              background: "linear-gradient(9deg, #F7F7F7 6.49%, rgba(247, 247, 247, 0.00) 93.46%)"
+            }}
           >
             <div
-              className={`w-full  transition-transform duration-300 hover:scale-105 `}
+              className="w-full transition-transform duration-300 hover:scale-105"
             >
               {" "}
               {/* Image Section */}
-              <div className="w-[360px] overflow-hidden">
+              <div className="w-[300px] h-[300px] overflow-hidden rounded-xl mx-auto">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
+                  style={{
+                    aspectRatio: "4/4",
+                  }}
                 />
               </div>
               {/* Content Section */}
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-primary mb-2 line-clamp-2">
+              <div className="p-6 flex flex-col items-center text-center w-full">
+                <h3 className="text-lg font-semibold text-primary mb-2 line-clamp-2 text-center w-full">
                   {item.title}
                 </h3>
 
                 {item.description && (
                   <p
-                    className={`text-sm text-primary opacity-70 mb-4 line-clamp-3 ${descClassName}`}
+                    className={`text-sm text-primary opacity-70 mb-4 line-clamp-3 text-center w-full ${descClassName}`}
                   >
                     {item.description}
                   </p>

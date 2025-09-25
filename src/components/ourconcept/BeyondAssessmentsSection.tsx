@@ -6,7 +6,7 @@ const BeyondAssessmentsSection = () => {
           {/* Left Column: Person with Screen */}
           <div className="bg-brand-bg rounded-2xl p-8">
             <img
-              src="/our-c-3.svg"
+              src="/our-c-2.svg"
               alt="Beyond Outdated Assessments - Modern hiring evaluation"
               className="w-full h-auto"
             />

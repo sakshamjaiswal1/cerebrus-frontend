@@ -65,7 +65,7 @@ const Experience = () => {
         <GradientText text="What Powers the Cerebrus Experience" />
 
         {/* Single Experience Card */}
-        <div className="bg-brand-bg rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 mx-auto">
+        <div className="bg-brand-bg rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 mx-auto mt-4 sm:mt-6 lg:mt-6">
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
             {/* Image Section with Sliding Animation */}
             <div

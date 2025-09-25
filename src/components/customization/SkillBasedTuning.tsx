@@ -1,3 +1,5 @@
+import AnimatedProgressBar from '../common/AnimatedProgressBar'
+
 const SkillBasedTuning = () => {
   return (
     <>
@@ -38,27 +40,27 @@ const SkillBasedTuning = () => {
                 </div>
               </div>
 
-              <div className="space-y-4 bg-white border border-gray-300 rounded-2xl p-4 whitespace-nowrap">
-                <div className="flex items-center space-x-4">
-                  <span className="text-sm text-primary">Skill 1</span>
-                  <div className="bg-white border border-gray-200 rounded-md p-1 w-11/12">
-                    <div className="w-4/5 h-6 bg-yellow-200 rounded"></div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <span className="text-sm text-primary">Skill 1</span>
-                  <div className="bg-white border border-gray-200 rounded-md p-1 w-11/12">
-                    <div className="w-12 h-6 bg-red-300 rounded"></div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <span className="text-sm text-primary">Skill 1</span>
-                  <div className="bg-white border border-gray-200 rounded-md p-1 w-11/12">
-                    <div className="w-12 h-6 bg-green-400 rounded"></div>
-                  </div>
-                </div>
+              <div className="space-y-4 bg-white border border-gray-300 rounded-2xl p-4">
+                <AnimatedProgressBar 
+                  percentage={80} 
+                  color="yellow" 
+                  label="Skill 1"
+                  delay={300}
+                />
+                
+                <AnimatedProgressBar 
+                  percentage={25} 
+                  color="red" 
+                  label="Skill 2"
+                  delay={600}
+                />
+                
+                <AnimatedProgressBar 
+                  percentage={60} 
+                  color="green" 
+                  label="Skill 3"
+                  delay={900}
+                />
               </div>
 
               <div className="mt-6">

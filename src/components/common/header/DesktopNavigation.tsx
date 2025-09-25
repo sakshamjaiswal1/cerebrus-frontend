@@ -14,7 +14,7 @@ const DesktopNavigation = () => {
       const rect = buttonRef.current.getBoundingClientRect();
       setDropdownPosition({
         top: rect.bottom + 8,
-        left: rect.left,
+        left: rect.left + (rect.width / 2), // Center point of the button
       });
     }
   }, [isDropdownOpen]);
@@ -22,13 +22,13 @@ const DesktopNavigation = () => {
     <>
       {/* Desktop Navigation Menu */}
       <nav className=" hidden lg:flex items-center justify-end pr-12 w-3/4 space-x-8">
-        <Link
+        {/* <Link
           to="/"
           className="text-base font-medium transition-colors duration-200 hover:opacity-70"
           style={{ color: "#1A323C" }}
         >
           Home
-        </Link>
+        </Link> */}
         <Link
           to="/about"
           className="text-base font-medium transition-colors duration-200 hover:opacity-70"
@@ -77,10 +77,11 @@ const DesktopNavigation = () => {
         {isDropdownOpen &&
           createPortal(
             <div
-              className="absolute w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-[99]"
+              className="absolute w-40 bg-white rounded-lg shadow-lg border border-gray-200 z-[99]"
               style={{
                 top: dropdownPosition.top,
                 left: dropdownPosition.left,
+                transform: 'translateX(-50%)', // Center the dropdown
               }}
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
@@ -122,7 +123,7 @@ const DesktopNavigation = () => {
           <DarkAnimatedButton text="Get Started" />
 
           {/* Login Button */}
-          <AnimatedButton text="Login" />
+          <AnimatedButton text="Login" variant="outline" />
         </div>
       </nav>
 

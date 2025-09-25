@@ -7,7 +7,7 @@ import ContactCards from "../components/contact/ContactCards";
 
 function ContactUs() {
   return (
-    <div className="bg-brand-bg min-h-screen">
+    <div className="bg-white min-h-screen">
       <div className="max-w-[1440px] mx-auto">
         <Helmet>
           <title>
