@@ -51,7 +51,7 @@ const EventsSection = () => {
       <div className="mx-auto p-4 sm:p-6 lg:p-8 bg-brand-bg rounded-xl">
         <SwipeableCarousel
           items={eventsData}
-          cardBackground="bg-gradient-to-b from-transparent to-gray-100"
+          // cardBackground="bg-gradient-to-b from-transparent to-gray-100"
           autoPlayInterval={5000}
           className="w-full"
           descClassName="!text-lg font-medium !text-gray-600"
