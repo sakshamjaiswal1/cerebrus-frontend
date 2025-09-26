@@ -14,6 +14,7 @@ import Proctoring from "./pages/Proctoring";
 import Algorithm from "./pages/Algorithm";
 import CandidateReport from "./pages/CandidateReport";
 import OurConcept from "./pages/OurConcept";
+import FallbackPage from "./pages/FallbackPage";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
   {
     path: "/our-concept",
     element: <OurConcept />,
+  },
+  {
+    path: "*",
+    element: <FallbackPage />,
   },
 ]);
 function App() {

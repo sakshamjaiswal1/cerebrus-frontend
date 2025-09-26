@@ -5,7 +5,7 @@ const EventsSection = () => {
   const eventsData = [
     {
       id: "event1",
-      image: "/card_img_1.svg",
+      image: "src/assets/local/about/events1.png",
       title: "",
       description:
         "Celebrating innovation and entrepreneurship in the tech industry.",
@@ -13,7 +13,7 @@ const EventsSection = () => {
     },
     {
       id: "event2",
-      image: "/card_img_2.svg",
+      image: "src/assets/local/about/events1.png",
       title: "",
       description:
         "Presenting our AI-powered interview platform to investors and industry leaders.",
@@ -21,14 +21,14 @@ const EventsSection = () => {
     },
     {
       id: "event3",
-      image: "/card_img_3.svg",
+      image: "src/assets/local/about/events1.png",
       title: "",
       description: "Recognition for excellence in AI-driven hiring solutions.",
       date: "",
     },
     {
       id: "event4",
-      image: "/exp_img_1.svg",
+      image: "src/assets/local/about/events1.png",
       title: "",
       description:
         "Global platform showcasing innovative recruitment technologies.",
@@ -36,7 +36,7 @@ const EventsSection = () => {
     },
     {
       id: "event5",
-      image: "/exp_img_2.svg",
+      image: "src/assets/local/about/events1.png",
       title: "",
       description:
         "Award for outstanding contribution to the recruitment industry.",
@@ -51,7 +51,7 @@ const EventsSection = () => {
       <div className="mx-auto p-4 sm:p-6 lg:p-8 bg-brand-bg rounded-xl">
         <SwipeableCarousel
           items={eventsData}
-          cardBackground="bg-gradient-to-b from-transparent to-gray-100"
+          // cardBackground="bg-gradient-to-b from-transparent to-gray-100"
           autoPlayInterval={5000}
           className="w-full"
           descClassName="!text-lg font-medium !text-gray-600"

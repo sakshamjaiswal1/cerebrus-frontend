@@ -18,7 +18,7 @@ const CVScreeningSection = () => {
           {/* Right Column: Conveyor Belt Illustration */}
           <div className="bg-brand-bg rounded-2xl p-8">
             <img
-              src="/our-c-2.svg"
+              src="/our-c-3.svg"
               alt="CV Screening - AI-powered conveyor belt system"
               className="w-full h-auto"
             />

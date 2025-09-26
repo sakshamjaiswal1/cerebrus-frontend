@@ -7,7 +7,7 @@ const IntuiteDashboardCard = () => {
   return (
     <div className="p-4 sm:p-6 lg:p-8 flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch h-auto group">
       {/* Left Content */}
-      <div className="relative bg-brand-bg w-full lg:w-7/12 lg:group-hover:w-5/12 rounded-xl p-6 sm:p-8 lg:py-16 lg:px-10 transition-all duration-500 h-[70vh]">
+      <div className="relative bg-brand-bg w-full lg:w-7/12 lg:group-hover:w-5/12 rounded-xl p-6 sm:p-8 lg:py-16 lg:px-10 transition-all duration-500 h-[60vh]">
         {/* Content that hides on hover on desktop, always visible on mobile */}
         <div className="lg:group-hover:opacity-0 lg:group-hover:scale-95 transition-all duration-500">
           <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-4 sm:mb-6 text-center lg:text-left max-md:hidden">
@@ -42,7 +42,7 @@ const IntuiteDashboardCard = () => {
       </div>
 
       {/* Right Section - Customization Flexibility */}
-      <div className="relative bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 cursor-pointer transition-all duration-500 hover:shadow-lg w-full lg:w-5/12 lg:group-hover:w-7/12 max-h-[70vh]">
+      <div className="relative bg-brand-bg rounded-xl p-4 sm:p-6 lg:p-8 cursor-pointer transition-all duration-500 hover:shadow-lg w-full lg:w-5/12 lg:group-hover:w-7/12 max-h-[60vh]">
         {/* Default State - Always visible on mobile, hides on desktop hover */}
         <div className="lg:group-hover:opacity-0 lg:group-hover:scale-95 transition-all duration-500">
           <div className="max-md:hidden">

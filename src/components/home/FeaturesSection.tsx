@@ -14,21 +14,22 @@ const FeaturesSection = () => {
       title: "MetaHuman Interviewer",
       description:
         "Our lifelike AI-powered MetaHuman engages candidates in natural, unscripted conversations, designed to simulate real-world human interactions.",
-      image: "/card_img_2.svg", // Will be added later
+       image: "/card_img_3.svg",
     },
     {
       id: "reports",
       title: "Comprehensive Reports",
       description:
         "Detailed analytics and insights provide complete candidate evaluation with actionable intelligence.",
-      image: "/card_img_3.svg", // Will be added later
+      image: "/card_img_4.svg", // Will be added later
+      
     },
     {
       id: "customization",
       title: "Customization Flexibility",
       description:
         "Customize your questions, skills, difficulty levels, and pacing, so every interview reflects your standards.",
-      image: "/card_img_4.svg", // Will be added later
+      image: "/card_img_2.svg", // Will be added later
     },
   ];
 

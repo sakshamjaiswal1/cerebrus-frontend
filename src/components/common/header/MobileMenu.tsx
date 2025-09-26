@@ -50,14 +50,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
         {/* Mobile Navigation Links */}
         <nav className="flex flex-col p-6 space-y-6">
-          <Link
+          {/* <Link
             to="/"
             className="text-lg font-medium transition-colors duration-200 hover:opacity-70"
             style={{ color: "#1A323C" }}
             onClick={onClose}
           >
             Home
-          </Link>
+          </Link> */}
           <Link
             to="/about"
             className="text-lg font-medium transition-colors duration-200 hover:opacity-70"

@@ -22,7 +22,12 @@ const Footer = () => {
                   alt="Cerebrus" 
                   className="h-20 w-auto mb-4"
                 />
-                <p className="text-primary text-sm font-medium tracking-wider text-center">
+                <p className="text-primary text-center text-[16px] font-montserrat font-medium uppercase"
+                  style={{
+                    letterSpacing: "4px",
+                    lineHeight: "normal",
+                    fontStyle: "normal"
+                  }}>
                   PERFECTING EVALUATION
                 </p>
               </div>
@@ -171,7 +176,7 @@ const Footer = () => {
                 alt="Griphic" 
                 className="h-6 w-auto"
               />
-              <span>GRIPHIC Product</span>
+              <span className='font-medium text-sm'>Product</span>
             </div>
           </div>
         </div>

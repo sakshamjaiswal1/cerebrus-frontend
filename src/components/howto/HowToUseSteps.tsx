@@ -65,7 +65,7 @@ const HowToUseSteps = () => {
                       </div>
                     </div>
                     <div className="max-md:w-8/12 max-md:ml-2 max-md:mt-3">
-                      <h3 className="text-sm sm:text-xl lg:text-2xl font-semibold text-primary mb-1 sm:mb-4">{step.title}</h3>
+                      <h3 className="text-2xl sm:text-[30px] lg:text-4xl font-medium text-primary mb-1 sm:mb-4 self-stretch" style={{ fontFamily: 'Montserrat', color: '#1A323C' }}>{step.title}</h3>
                       <p className="text-sm sm:text-base text-primary opacity-70 leading-relaxed max-md:hidden">
                         {step.description}
                       </p>

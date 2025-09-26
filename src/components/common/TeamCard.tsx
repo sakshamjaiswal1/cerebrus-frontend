@@ -62,6 +62,14 @@ const TeamCard = ({
             <p className="text-xs sm:text-sm text-primary opacity-80 text-center leading-relaxed">
               {description}
             </p>
+            {/* src\assets\local\about\linkedin.png */}
+             <div className="flex justify-center">
+            <img 
+              src="src/assets/local/about/linkedin.png" 
+              alt="linkedin" 
+              className="w-fullh-[40px] w-[40px] mt-4 cursor-pointer hover:opacity-70 transition-opacity "
+            />
+          </div>
           </div>
         </div>
       </div>

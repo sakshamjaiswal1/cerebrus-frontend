@@ -7,15 +7,15 @@ const WhatsNextSection = () => {
             
             {/* Left Content */}
             <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-medium text-primary leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-medium leading-normal" style={{ fontFamily: 'Montserrat', color: '#1A323C' }}>
                 What's next for<br />Cerebrus?
               </h2>
               
-              <div className="space-y-2 sm:space-y-4">
-                <p className="text-sm sm:text-base text-primary">
+              <div className="space-y-2">
+                <p className="text-lg sm:text-xl lg:text-2xl leading-[135%]" style={{ fontFamily: 'Montserrat', color: '#1A323C', fontWeight: 400 }}>
                   Insights from Siddhant Bansal,
                 </p>
-                <p className="text-sm sm:text-base font-medium text-primary">
+                <p className="text-lg sm:text-xl lg:text-2xl leading-[135%]" style={{ fontFamily: 'Montserrat', color: '#1A323C', fontWeight: 400 }}>
                   CEO@Griphic
                 </p>
               </div>
