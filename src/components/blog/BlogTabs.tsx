@@ -128,104 +128,173 @@ const BlogTabs = () => {
   return (
     <section className="w-full py-8 sm:py-12 lg:py-16">
       <div className="mx-auto px-4 sm:px-6 lg:px-0">
-        <div className="w-full flex justify-between items-center">
-          {/* Tab Navigation */}
-          <div className="relative flex border-2 border-gray-300 w-max rounded-full items-center mb-8 sm:mb-10 lg:mb-12">
-            {/* Sliding Background */}
-            <div
-              className={`absolute top-0 bottom-0 bg-primary rounded-full transition-all duration-300 ease-in-out ${activeTab === "blogs"
-                ? "left-0 w-[calc(40%-1px)]"
-                : "left-[calc(40%+1px)] w-[calc(60%-1px)]"
-                }`}
-            />
+        <div className="w-full">
+          {/* Tab Navigation and Sort Controls */}
+          <div className="flex flex-row justify-between items-center gap-3 sm:gap-4 mb-4 sm:mb-6 lg:mb-12">
+            {/* Tabs - Left side */}
+            <div className="relative flex border-2 border-gray-300 w-max rounded-full items-center">
+              {/* Sliding Background */}
+              <div
+                className={`absolute top-0 bottom-0 bg-primary rounded-full transition-all duration-300 ease-in-out ${activeTab === "blogs"
+                  ? "left-0 w-[calc(40%-1px)]"
+                  : "left-[calc(40%+1px)] w-[calc(60%-1px)]"
+                  }`}
+              />
 
-            <button
-              onClick={() => setActiveTab("blogs")}
-              className={`relative z-10 px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${activeTab === "blogs"
-                ? "text-white"
-                : "text-gray-700 hover:text-gray-900"
-                }`}
-            >
-              Blogs
-            </button>
-            <button
-              onClick={() => setActiveTab("case-studies")}
-              className={`relative z-10 px-4 sm:px-6 text-center py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${activeTab === "case-studies"
-                ? "text-white"
-                : "text-gray-700 hover:text-gray-900"
-                }`}
-            >
-              Case Studies
-            </button>
-          </div>
-
-          {/* Sort and Search Controls */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
-            {/* Sort by Dropdown */}
-            <div className="relative" ref={dropdownRef}>
               <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2.5 border-2 border-gray-300 rounded-full text-sm font-medium text-gray-700 hover:border-gray-400 transition-all duration-200"
+                onClick={() => setActiveTab("blogs")}
+                className={`relative z-10 px-3 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${activeTab === "blogs"
+                  ? "text-white"
+                  : "text-gray-700 hover:text-gray-900"
+                  }`}
               >
-                Sort by
+                Blogs
+              </button>
+              <button
+                onClick={() => setActiveTab("case-studies")}
+                className={`relative z-10 px-3 sm:px-6 text-center py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 ${activeTab === "case-studies"
+                  ? "text-white"
+                  : "text-gray-700 hover:text-gray-900"
+                  }`}
+              >
+                Case Studies
+              </button>
+            </div>
+
+            {/* Sort and Search Controls - Mobile: Sort next to tabs, Desktop: Sort + Search grouped together */}
+            <div className="flex flex-row items-center gap-3 sm:gap-4">
+              {/* Sort by Dropdown */}
+              <div className="relative flex-shrink-0" ref={dropdownRef}>
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-gray-300 rounded-full text-xs sm:text-sm font-medium text-gray-700 hover:border-gray-400 transition-all duration-200"
+                >
+                  <span className="hidden sm:inline">Sort by</span>
+                  <span className="sm:hidden">Sort</span>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-200 sm:w-4 sm:h-4 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  >
+                    <path
+                      d="M4 6L8 10L12 6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div
+                    className="absolute top-0 right-0 w-80 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden"
+                    style={{
+                      animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+                      transformOrigin: 'top right'
+                    }}
+                  >
+                    <div className="p-2">
+                      {sortOptions.map((option, index) => (
+                        <div 
+                        className="hover:bg-brand-bg cursor-pointer hover:px-2 transition-all duration-300 rounded-xl" key={index}
+                        >
+                          <button
+                            key={index}
+                            onClick={() => {
+                              setSelectedSort(option)
+                              setIsDropdownOpen(false)
+                            }}
+                            className={`w-full px-4 py-3 text-left text-sm cursor-pointer transition-all duration-200 rounded-xl ${selectedSort === option
+                              ? "bg-black bg-clip-text text-transparent font-medium"
+                              : "text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent"
+                              }`}
+                            style={{
+                              animationDelay: `${index * 0.05}s`,
+                              animation: `slideInOption 0.3s ease-out ${index * 0.05}s both`
+                            }}
+                          >
+                            {option}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Search Input - Hidden on mobile, shown on desktop grouped with sort */}
+              <div className="relative hidden sm:block w-full sm:w-max" ref={searchRef}>
                 <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
                 >
                   <path
-                    d="M4 6L8 10L12 6"
+                    d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
                     stroke="currentColor"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => !searchQuery && setIsSearchFocused(false)}
+                  className={`pl-12 py-2.5 border-2 border-gray-300 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full sm:w-[200px] ${
+                    isSearchFocused && window.innerWidth >= 640 ? 'sm:w-[400px]' : ''
+                  }`}
+                />
 
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <div
-                  className="absolute top-0 right-0 w-80 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden"
-                  style={{
-                    animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
-                    transformOrigin: 'top right'
-                  }}
-                >
-                  <div className="p-2">
-                    {sortOptions.map((option, index) => (
-                      <div 
-                      className="hover:bg-brand-bg cursor-pointer hover:px-2 transition-all duration-300 rounded-xl" key={index}
-                      >
-                        <button
-                          key={index}
-                          onClick={() => {
-                            setSelectedSort(option)
-                            setIsDropdownOpen(false)
-                          }}
-                          className={`w-full px-4 py-3 text-left text-sm cursor-pointer transition-all duration-200 rounded-xl ${selectedSort === option
-                            ? "bg-black bg-clip-text text-transparent font-medium"
-                            : "text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent"
-                            }`}
-                          style={{
-                            animationDelay: `${index * 0.05}s`,
-                            animation: `slideInOption 0.3s ease-out ${index * 0.05}s both`
-                          }}
-                        >
-                          {option}
-                        </button>
+                {/* Search Suggestions Popup */}
+                {isSearchFocused && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden w-full sm:w-[400px]"
+                    style={{
+                      animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+                      transformOrigin: 'top left'
+                    }}
+                  >
+                    <div className="p-4">
+                      <div className="flex flex-wrap gap-2">
+                        {searchSuggestions.map((suggestion, index) => (
+                          <button
+                            key={index}
+                            onClick={() => {
+                              setSearchQuery(suggestion)
+                              setIsSearchFocused(false)
+                            }}
+                            className="px-3 py-1.5 rounded-full text-xs text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent transition-all duration-200"
+                            style={{
+                              animationDelay: `${index * 0.03}s`,
+                              animation: `slideInOption 0.3s ease-out ${index * 0.03}s both`
+                            }}
+                          >
+                            {suggestion}
+                          </button>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
+          </div>
 
-            {/* Search Input */}
-            <div className="relative w-max" ref={searchRef}>
+          {/* Mobile Search Bar */}
+          <div className="sm:hidden mb-6">
+            <div className="relative w-full">
               <svg
                 width="20"
                 height="20"
@@ -249,19 +318,16 @@ const BlogTabs = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => setIsSearchFocused(true)}
                 onBlur={() => !searchQuery && setIsSearchFocused(false)}
-                className={`pl-12 py-2.5 border-2 border-gray-300 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out ${
-                  isSearchFocused ? 'w-[400px]' : 'w-[200px]'
-                }`}
+                className="pl-12 py-2.5 border-2 border-gray-300 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full"
               />
 
-              {/* Search Suggestions Popup */}
+              {/* Search Suggestions Popup for Mobile */}
               {isSearchFocused && (
                 <div 
-                  className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden"
+                  className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden w-full"
                   style={{
                     animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
-                    transformOrigin: 'top left',
-                    width: isSearchFocused ? '400px' : '200px'
+                    transformOrigin: 'top left'
                   }}
                 >
                   <div className="p-4">
@@ -288,7 +354,6 @@ const BlogTabs = () => {
               )}
             </div>
           </div>
-
 
         </div>
 

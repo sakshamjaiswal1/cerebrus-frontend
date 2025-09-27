@@ -45,7 +45,18 @@ const CultureSection = () => {
 
     return (
         <section className="mb-12 sm:mb-16 lg:mb-24">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-primary mb-3 sm:mb-4">A Culture of Fairness and Simplicity</h2>
+            <h2 
+                className="text-2xl sm:text-3xl lg:text-[36px] font-medium text-primary mb-3 sm:mb-4"
+                style={{
+                    fontFamily: 'Montserrat',
+                    color: '#1A323C',
+                    fontStyle: 'normal',
+                    fontWeight: 500,
+                    lineHeight: 'normal'
+                }}
+            >
+                A Culture of Fairness and Simplicity
+            </h2>
             <p className="text-sm sm:text-base lg:text-xl text-primary font-[300] mb-6 sm:mb-8 w-full leading-relaxed">Our culture wasn't written first, it came out of how we work, by figuring things out, fixing what was broken, and helping each other get better. It's practical, honest, and still evolving.</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
                 {cultureItems.map((item, index) => (

@@ -42,7 +42,7 @@ function ContactUs() {
           />
           <link rel="canonical" href="https://cerebrus.ai/contact" />
         </Helmet>
-        <main className="p-10 max-md:p-5">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <ContactHero />
           <ContactForm />

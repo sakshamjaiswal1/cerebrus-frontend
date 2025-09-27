@@ -44,7 +44,7 @@ function Blog() {
           />
           <link rel="canonical" href="https://cerebrus.ai/blog" />
         </Helmet>
-        <main className="p-10">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <BlogHero />
           <BlogFeatured />

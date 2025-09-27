@@ -45,8 +45,8 @@ const HowToUseSteps = () => {
             <div key={index} className="bg-gray-50 rounded-r-2xl shadow-lg lg:relative lg:w-11/12 lg:ml-auto max-md:p-4 w-full">
               <div className="flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-6 lg:gap-8">
 
-                {/* Circle Icon - Mobile: top, Desktop: left */}
-                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32 bg-white shadow-lg rounded-full flex items-center justify-center order-1 lg:order-1 lg:absolute lg:-left-16 lg:top-[35%] p-4 max-md:hidden">
+                {/* Circle Icon - Desktop only */}
+                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32 bg-white shadow-lg rounded-full items-center justify-center order-1 lg:order-1 lg:absolute lg:-left-16 lg:top-[35%] p-4 hidden lg:flex">
                   <div className="bg-gray-100 rounded-full p-1 sm:p-4 w-full h-full flex items-center justify-center shadow-md">
                     <img src={step.icon} alt={step.title} className="w-8 h-8 sm:w-10 sm:h-10 lg:w-20 lg:h-20 p-1 sm:p-2 object-contain" />
                   </div>
@@ -56,16 +56,27 @@ const HowToUseSteps = () => {
                 <div className="flex-1 flex flex-col lg:flex-row lg:items-center justify-end gap-4 sm:gap-6 lg:gap-8 order-2 lg:order-2">
 
                   {/* Text Content */}
-                  <div className="w-full lg:w-2/5 text-left max-md:flex max-md:items-center max-md:flex-wrap">
+                  <div className="w-full lg:w-2/5 text-left flex items-center flex-wrap lg:block">
 
-                    {/* Circle Icon - only for mobile */}
-                    <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-32 lg:h-32 bg-white shadow-lg rounded-full items-center justify-center lg:absolute lg:-left-16 lg:top-[35%] p-4 max-md:flex hidden">
-                      <div className="bg-gray-100 rounded-full p-1 sm:p-4 w-full h-full flex items-center justify-center shadow-md">
-                        <img src={step.icon} alt={step.title} className="w-8 h-8 sm:w-10 sm:h-10 lg:w-20 lg:h-20 p-1 sm:p-2 object-contain" />
+                    {/* Circle Icon - only for mobile and tablet */}
+                    <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white shadow-lg rounded-full flex items-center justify-center p-2 sm:p-3 lg:hidden">
+                      <div className="bg-gray-100 rounded-full w-full h-full flex items-center justify-center shadow-md p-2 sm:p-3">
+                        <img src={step.icon} alt={step.title} className="w-full h-full object-contain" />
                       </div>
                     </div>
-                    <div className="max-md:w-8/12 max-md:ml-2 max-md:mt-3">
-                      <h3 className="text-2xl sm:text-[30px] lg:text-4xl font-medium text-primary mb-1 sm:mb-4 self-stretch" style={{ fontFamily: 'Montserrat', color: '#1A323C' }}>{step.title}</h3>
+                    <div className="w-8/12 ml-2 mt-3 lg:w-full lg:ml-0 lg:mt-0">
+                      <h3 
+                        className="font-medium text-primary mb-1 sm:mb-4 self-stretch text-2xl sm:text-3xl lg:text-4xl"
+                        style={{ 
+                          fontFamily: 'Montserrat', 
+                          color: '#1A323C', 
+                          fontStyle: 'normal',
+                          fontWeight: 500,
+                          lineHeight: 'normal'
+                        }}
+                      >
+                        {step.title}
+                      </h3>
                       <p className="text-sm sm:text-base text-primary opacity-70 leading-relaxed max-md:hidden">
                         {step.description}
                       </p>

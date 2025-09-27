@@ -46,7 +46,7 @@ function CandidateReport() {
           />
           <link rel="canonical" href="https://cerebrus.ai/candidate-reports" />
         </Helmet>
-        <main className="pt-10">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <StructuredInterviewReports />
           <IntegratedChat />

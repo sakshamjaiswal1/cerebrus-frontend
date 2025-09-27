@@ -33,11 +33,11 @@ const AnimatedButton = ({
 
       {/* Button content */}
       {!whiteButton && (
-        <div className="relative flex items-center space-x-2">
-          <span>{text}</span>
+        <div className="relative flex items-center space-x-1 sm:space-x-2">
+          <span className="whitespace-nowrap">{text}</span>
 
           {/* Arrow icon with rotation - transparent arrow with colored background */}
-          <div className="w-6 h-6 bg-primary group-hover:bg-white rounded-full flex items-center justify-center transition-colors duration-300 relative overflow-hidden">
+          <div className="w-5 h-5 sm:w-6 sm:h-6 bg-primary group-hover:bg-white rounded-full flex items-center justify-center transition-colors duration-300 relative overflow-hidden flex-shrink-0">
             {/* Transparent arrow cutout */}
             <div
               className="absolute inset-0 transform group-hover:rotate-[45deg] transition-transform duration-300 top-0 bottom-1"
@@ -57,8 +57,8 @@ const AnimatedButton = ({
         </div>
       )}
       {whiteButton && (
-        <div className="relative flex items-center space-x-2">
-          <span>{text}</span>
+        <div className="relative flex items-center space-x-1 sm:space-x-2">
+          <span className="whitespace-nowrap">{text}</span>
 
           {/* Arrow icon with rotation - transparent arrow with colored background */}
           <div className="w-6 h-6 bg-white group-hover:bg-white rounded-full flex items-center justify-center transition-colors duration-300 relative overflow-hidden">

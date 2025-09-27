@@ -53,8 +53,17 @@ const RecentUpdatesSection = () => {
   return (
     <section className="w-full py-8 sm:py-12 lg:py-16 bg-white">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-full flex justify-between items-center">
-          <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-6 sm:mb-8">
+         <div className="w-full flex justify-between items-center mb-6 sm:mb-8">
+          <h2 
+            className="font-medium text-primary text-[24px] sm:text-[30px] lg:text-[36px]"
+            style={{
+              fontFamily: 'Montserrat',
+              color: '#1A323C',
+              fontStyle: 'normal',
+              fontWeight: 500,
+              lineHeight: 'normal'
+            }}
+          >
             Recent Updates
           </h2>
           <AnimatedButton text="View All" className="!border !border-primary !bg-transparent" />
