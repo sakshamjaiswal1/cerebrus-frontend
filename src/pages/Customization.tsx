@@ -46,7 +46,7 @@ function Customization() {
           />
           <link rel="canonical" href="https://cerebrus.ai/customization" />
         </Helmet>
-        <main className="p-10 max-md:p-5">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <CustomizationHero />
           <CustomizationFeatures />

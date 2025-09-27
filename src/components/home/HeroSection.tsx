@@ -27,11 +27,11 @@ const HeroSection = () => {
           </p>
 
           {/* Buttons Section */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-row items-center space-x-2 sm:space-x-4">
             {/* Get Started Button */}
             <button
               type="button"
-              className="!px-6 !py-1.5 rounded-full bg-primary font-medium text-white hover:opacity-90 cursor-pointer"
+              className="px-4 sm:px-6 py-1.5 rounded-full bg-primary font-medium text-white hover:opacity-90 cursor-pointer whitespace-nowrap text-sm sm:text-base"
             >
               Get Started
             </button>

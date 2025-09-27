@@ -42,7 +42,7 @@ function HowToUse() {
           />
           <link rel="canonical" href="https://cerebrus.ai/how-to-use" />
         </Helmet>
-        <main className="p-10">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <HowToUseHero />
           <HowToUseSteps />

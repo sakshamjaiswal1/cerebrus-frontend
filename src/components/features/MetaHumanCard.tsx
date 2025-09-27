@@ -18,16 +18,35 @@ const MetaHumanCard = () => {
         <div className="absolute bottom-0 h-full lg:pb-24 bg-[#00000070] bg-opacity-40 flex flex-col justify-end p-4 sm:p-6 lg:p-8">
           {/* Content that hides on hover on desktop, always visible on mobile */}
           <div className="w-1/2 max-md:w-full">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-white mb-3 sm:mb-4 lg:mb-6">
+            <h2 
+              className="font-medium text-white mb-3 sm:mb-4 lg:mb-6 text-sm sm:text-base lg:text-2xl"
+              style={{ 
+                fontFamily: 'Montserrat', 
+                color: '#FFF', 
+                fontStyle: 'normal',
+                fontWeight: 500,
+                lineHeight: 'normal'
+              }}
+            >
               MetaHuman Interviewer
             </h2>
             {/* Show shorter text on mobile, full text on desktop */}
-            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-4 sm:mb-6 lg:block hidden font-[300]">
+            <p className="text-sm sm:text-base leading-relaxed text-white opacity-90 mb-4 sm:mb-6 sm:block hidden font-[300]">
               Cerebrus' MetaHuman Interviewer bridges the gap between AI
               efficiency and human nuance. It responds in real time, adjusting
               its follow-ups and flow based on how the candidate answers.
             </p>
-            <p className="text-sm leading-relaxed text-white opacity-90 mb-3 lg:hidden font-[300]">
+            <p 
+              className="text-white opacity-90 mb-3 sm:hidden"
+              style={{
+                fontFamily: 'Montserrat',
+                color: '#FFF',
+                fontSize: '10px',
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: '135%'
+              }}
+            >
               The Cerebrus MetaHuman Interviewer blends structured evaluation
               with realism and human-like interaction.
             </p>

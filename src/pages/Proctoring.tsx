@@ -43,7 +43,7 @@ function Proctoring() {
           />
           <link rel="canonical" href="https://cerebrus.ai/proctoring" />
         </Helmet>
-        <main className="pt-4 sm:pt-6 lg:pt-10 px-4 sm:px-6 lg:px-8">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <ProctoringHero />
           <MeasuresWeTake />

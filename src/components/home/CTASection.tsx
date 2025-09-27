@@ -4,7 +4,7 @@ import AnimatedButton from "../common/AnimatedButton"
 const CTASection = () => {
   return (
     <section className="w-full py-16">
-      <GradientBackground className="rounded-3xl lg:min-h-[300px] p-12">
+      <GradientBackground className="rounded-3xl lg:min-h-[200px] py-8 sm:py-16">
         {/* Content will go here later */}
         <div className="flex items-center justify-center h-full">
           <div className="text-center">

@@ -45,7 +45,16 @@ const EventsSection = () => {
   ];
   return (
     <section className="w-full py-8 sm:py-12 lg:py-16">
-      <h2 className="text-2xl sm:text-3xl font-medium text-primary mb-6 sm:mb-8">
+      <h2 
+        className="font-medium text-primary mb-6 sm:mb-8 text-[24px] sm:text-[30px] lg:text-[36px]"
+        style={{
+          fontFamily: 'Montserrat',
+          color: '#1A323C',
+          fontStyle: 'normal',
+          fontWeight: 500,
+          lineHeight: 'normal'
+        }}
+      >
         Events & Recognitions
       </h2>
       <div className="mx-auto p-4 sm:p-6 lg:p-8 bg-brand-bg rounded-xl">

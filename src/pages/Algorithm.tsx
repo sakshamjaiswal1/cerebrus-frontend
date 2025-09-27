@@ -43,7 +43,7 @@ function Algorithm() {
           />
           <link rel="canonical" href="https://cerebrus.ai/algorithm" />
         </Helmet>
-        <main className="pt-10">
+        <main className="p-4 sm:p-6 lg:p-10">
           <Header />
           <AlgorithmHero />
           <HowItComesTogether />
