@@ -31,23 +31,20 @@ const DesktopNavigation = () => {
         </Link> */}
         <Link
           to="/about"
-          className="text-base font-medium transition-colors duration-200 hover:opacity-70"
-          style={{ color: "#1A323C" }}
+          className="text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1"
         >
           About
         </Link>
         <Link
           to="/features"
-          className="text-base font-medium transition-colors duration-200 hover:opacity-70"
-          style={{ color: "#1A323C" }}
+          className="text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1"
         >
           Features
         </Link>
         <div className="relative">
           <button
             ref={buttonRef}
-            className="flex items-center space-x-1 text-base font-medium transition-colors duration-200 hover:opacity-70"
-            style={{ color: "#1A323C" }}
+            className="flex items-center text-primary space-x-1 text-base font-semibold transition-all duration-200"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
             <span>Resources</span>

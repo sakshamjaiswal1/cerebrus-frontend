@@ -14,16 +14,14 @@ const HeroSection = () => {
       <SlideLeftRightWrapper className="w-full lg:w-1/2">
         <div className="bg-brand-bg lg:rounded-tl-xl  rounded-xl py-8 px-6 sm:py-12 sm:px-8 lg:py-16 lg:pl-12">
           {/* Main Heading */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-medium leading-tight mb-6  bg-brand-bg text-primary">
-            Beyond simple <br /> automation to make <br /> AI-hiring{" "}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-6  bg-brand-bg text-primary">
+            Beyond simple <br /> automation to make AI-<br /> hiring{" "}
             <AnimatedText />
           </h1>
 
           {/* Subtext */}
-          <p className="text-sm sm:text-base leading-relaxed my-6 sm:my-8 w-full sm:w-10/12 lg:w-9/12 opacity-70 text-primary">
-            Make the shift from outdated recruitment practices to AI-powered,
-            real-world, new-age interviews. Say goodbye to legacy practices and
-            expose yourself to more diverse and inclusive talent pools.
+          <p className="text-sm sm:text-lg leading-relaxed my-6 sm:my-8 w-full sm:w-10/12 lg:w-9/12 text-primary">
+            Bringing depth, context, and clarity to every hire with immersive interviews and real-time insights
           </p>
 
           {/* Buttons Section */}

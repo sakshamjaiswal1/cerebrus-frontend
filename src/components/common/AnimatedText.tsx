@@ -36,7 +36,7 @@ const AnimatedText = () => {
             ? 'transform translate-y-0 opacity-100' 
             : 'transform -translate-y-full opacity-0'
         }`}
-        style={{ color: '#8B5CF6' }}
+        style={{ color: '#8B5CF6', fontFamily: 'Georgia' }}
       >
         {words[currentIndex]}
       </span>

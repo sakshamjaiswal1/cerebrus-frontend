@@ -65,7 +65,7 @@ const Experience = () => {
         <GradientText text="What Powers the Cerebrus Experience" />
 
         {/* Single Experience Card */}
-        <div className="bg-brand-bg rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100 mx-auto mt-4 sm:mt-6 lg:mt-6">
+        <div className="bg-brand-bg rounded-3xl p-4 sm:p-6 lg:p-8 border border-[#d9d9d9] mx-auto mt-4 sm:mt-6 lg:mt-6">
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
             {/* Image Section with Sliding Animation */}
             <div
@@ -82,13 +82,12 @@ const Experience = () => {
                     key={experience.id}
                     src={experience.image}
                     alt={experience.title}
-                    className={`absolute w-full h-full object-cover transition-all duration-700 ease-in-out ${
-                      index === activeIndex
+                    className={`absolute w-full h-full object-cover transition-all duration-700 ease-in-out ${index === activeIndex
                         ? "opacity-100 transform translate-x-0"
                         : index < activeIndex
-                        ? "opacity-0 transform -translate-x-full"
-                        : "opacity-0 transform translate-x-full"
-                    }`}
+                          ? "opacity-0 transform -translate-x-full"
+                          : "opacity-0 transform translate-x-full"
+                      }`}
                   />
                 ))}
 
@@ -105,12 +104,19 @@ const Experience = () => {
             </div>
 
             {/* Content Section with Text Animation */}
-            <div className="w-full lg:w-1/2 space-y-4 text-left">
-              <h3 className="text-lg sm:text-xl font-semibold text-primary transition-opacity duration-500">
-                {currentExperience.title}
+            <div className="w-full lg:w-1/3 space-y-4 text-left">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium text-primary transition-opacity duration-500">
+                {currentExperience.title?.includes(":") ?
+                  <>
+                    <span className="font-bold">{currentExperience.title?.split(":")[0]}</span>
+                    <span>:{currentExperience.title?.split(":")[1]}</span>
+                  </>
+                  :
+                  currentExperience.title
+                }
               </h3>
 
-              <p className="text-sm text-primary opacity-70 leading-relaxed transition-opacity duration-500">
+              <p className="text-sm md:text-xl text-primary leading-relaxed transition-opacity duration-500">
                 {currentExperience.description}
               </p>
 

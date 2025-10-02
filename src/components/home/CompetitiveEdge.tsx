@@ -8,10 +8,8 @@ const CompetitiveEdge = () => {
         <GradientText text="Our Competitive Edge" />
 
         {/* Description Text */}
-        <p className="text-sm sm:text-base leading-relaxed mb-8 sm:mb-12 text-primary opacity-70 max-w-4xl">
-          Make the shift from outdated recruitment practices to AI-powered,
-          real-world, new-age interviews. Say goodbye to legacy practices and
-          expose yourself to more diverse and inclusive talent pools.
+        <p className="text-sm sm:text-base lg:text-xl leading-relaxed mb-8 sm:mb-12 text-primary max-w-full">
+        Cerebrus outperforms traditional and tech-enabled hiring models across many key metrics.
         </p>
 
         {/* Comparison Table */}
