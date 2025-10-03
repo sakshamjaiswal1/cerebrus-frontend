@@ -85,8 +85,8 @@ const DesktopNavigation = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <div className="py-2 flex flex-col space-y-1 font-semibold overflow-x-hidden">
-                <div className="py-2 hover:bg-brand-bg rounded-lg hover:translate-x-2 transition-all duration-300 ease-in-out">
+              <div className="py-2 pr-5 pl-2 flex flex-col space-y-1 font-semibold overflow-x-hidden">
+                <div className="py-2 hover:bg-gray-100 rounded-lg hover:translate-x-2 transition-all duration-300 ease-in-out">
                   <Link
                     to="/how-to-use"
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent transition-all duration-300 ease-in-out px-4 text-md"
