@@ -4,10 +4,11 @@ import Footer from "../components/common/Footer";
 import CTASection from "../components/home/CTASection";
 import HowToUseHero from "../components/howto/HowToUseHero";
 import HowToUseSteps from "../components/howto/HowToUseSteps";
+import { SlideBottomTopWrapper } from "../components/common/wrapper";
 
 function HowToUse() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#F7F7F7]">
       <div className="max-w-[1440px] mx-auto">
         <Helmet>
           <title>
@@ -44,9 +45,15 @@ function HowToUse() {
         </Helmet>
         <main className="p-4 sm:p-6 lg:p-10">
           <Header />
-          <HowToUseHero />
-          <HowToUseSteps />
-          <CTASection />
+          <SlideBottomTopWrapper>
+            <HowToUseHero />
+          </SlideBottomTopWrapper>
+          <SlideBottomTopWrapper>
+            <HowToUseSteps />
+          </SlideBottomTopWrapper>
+          <SlideBottomTopWrapper>
+            <CTASection />
+          </SlideBottomTopWrapper>
           <Footer />
         </main>
       </div>

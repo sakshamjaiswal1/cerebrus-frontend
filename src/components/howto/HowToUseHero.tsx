@@ -7,8 +7,7 @@ const HowToUseHero = () => {
         <div className="mb-6 sm:mb-8">
           <GradientText text="How to Use Cerebrus" />
         </div>
-        
-        <p className="text-sm sm:text-base leading-relaxed text-primary opacity-70 max-w-4xl">
+        <p className="text-sm sm:text-base leading-relaxed text-primary max-w-4xl">
           Let's walk you through each stage from creating a job and inviting candidates to running interviews and reviewing results.
         </p>
       </div>

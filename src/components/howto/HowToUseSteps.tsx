@@ -42,7 +42,9 @@ const HowToUseSteps = () => {
       <div className="mx-auto sm:px-6 lg:px-12">
         <div className="space-y-6 sm:space-y-8 lg:space-y-12">
           {steps.map((step, index) => (
-            <div key={index} className="bg-gray-50 rounded-r-2xl shadow-lg lg:relative lg:w-11/12 lg:ml-auto max-md:p-4 w-full">
+            <div key={index} className=" rounded-r-2xl shadow-lg lg:relative lg:w-11/12 lg:ml-auto max-md:p-4 w-full" style={{
+              background: "linear-gradient(270.41deg, rgba(239, 240, 237, 0) 0.35%, #F2F3EE 85.75%)",
+            }}>
               <div className="flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-6 lg:gap-8">
 
                 {/* Circle Icon - Desktop only */}
