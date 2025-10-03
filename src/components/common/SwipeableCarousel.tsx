@@ -16,6 +16,11 @@ interface SwipeableCarouselProps {
   showButton?: boolean;
   descClassName?: string;
   buttonComponent?: React.ReactNode;
+  cardBackground?: string;
+  titleClassName?: string;
+  contentClassName?: string;
+  imageContainerClassName?: string;
+  hoverEffect?: boolean;
 }
 
 const SwipeableCarousel = ({
@@ -25,6 +30,11 @@ const SwipeableCarousel = ({
   showButton = false,
   descClassName = "",
   buttonComponent = null,
+  cardBackground = "",
+  titleClassName = "",
+  contentClassName = "",
+  imageContainerClassName = "",
+  hoverEffect = true,
 }: SwipeableCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -79,15 +89,15 @@ const SwipeableCarousel = ({
             key={item.id}
             className="w-[408px] p-[24px] rounded-[20px] border border-[#F7F7F7]"
             style={{
-              background: "linear-gradient(9deg, #F7F7F7 6.49%, rgba(247, 247, 247, 0.00) 93.46%)"
+              background: cardBackground || "linear-gradient(9deg, #F7F7F7 6.49%, rgba(247, 247, 247, 0.00) 93.46%)"
             }}
           >
             <div
-              className="w-full transition-transform duration-300 hover:scale-105"
+              className={"w-full transition-transform duration-300 " + (hoverEffect ? "hover:scale-105" : "")}
             >
               {" "}
               {/* Image Section */}
-              <div className="w-[300px] h-[300px] overflow-hidden rounded-xl mx-auto">
+              <div className={`w-[300px] h-[300px] overflow-hidden rounded-xl mx-auto ${imageContainerClassName}`}>
                 <img
                   src={item.image}
                   alt={item.title}
@@ -98,14 +108,14 @@ const SwipeableCarousel = ({
                 />
               </div>
               {/* Content Section */}
-              <div className="p-6 flex flex-col items-center text-center w-full">
-                <h3 className="text-lg font-semibold text-primary mb-2 line-clamp-2 text-center w-full">
+              <div className={`p-6 flex flex-col items-center text-center w-full ${contentClassName}`}>
+                <h3 className={`text-base font-semibold text-primary mb-2 line-clamp-2 text-center w-full ${titleClassName}`}>
                   {item.title}
                 </h3>
 
                 {item.description && (
                   <p
-                    className={`text-sm text-primary opacity-70 mb-4 line-clamp-3 text-center w-full ${descClassName}`}
+                    className={`text-sm text-primary mb-4 line-clamp-3 text-center w-full ${descClassName}`}
                   >
                     {item.description}
                   </p>

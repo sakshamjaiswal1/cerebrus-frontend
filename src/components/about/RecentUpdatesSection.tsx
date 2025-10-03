@@ -5,47 +5,42 @@ const RecentUpdatesSection = () => {
   const updatesData = [
     {
       id: "update1",
-      image: "/exp_img_1.svg",
+      image: "/corp-room.png",
       title: "Business Leader of the Year at the EB-5 World CDS Congress",
       description:
         "We are thrilled to announce that our CEO has been recognized as Business Leader of the Year at the prestigious EB-5 World CDS Congress. This recognition highlights our commitment to innovation in the recruitment industry and our dedication to transforming how organizations evaluate talent through AI-powered solutions.",
-      date: "March 15, 2024",
       buttonText: "Read More",
     },
     {
       id: "update2",
-      image: "/exp_img_2.svg",
+      image: "/corp-room.png",
       title: "Business Leader of the Year at the EB-5 World CDS Congress",
       description:
         "Our latest product updates include enhanced AI capabilities, improved user interface, and new integrations with popular HR platforms. These updates make our interview platform even more powerful and user-friendly for organizations of all sizes.",
-      date: "March 10, 2024",
       buttonText: "Read More",
     },
     {
       id: "update3",
-      image: "/exp_img_3.svg",
+      image: "/corp-room.png",
       title: "Business Leader of the Year at the EB-5 World CDS Congress",
       description:
         "We're excited to share insights from our recent research on AI bias in hiring processes. Our team has published groundbreaking findings that help ensure fair and unbiased candidate evaluation across diverse talent pools.",
-      date: "March 5, 2024",
       buttonText: "Read More",
     },
     {
       id: "update4",
-      image: "/exp_img_4.svg",
+      image: "/corp-room.png",
       title: "Partnership with Leading Universities",
       description:
         "Cerebrus has partnered with top universities to enhance our AI algorithms with academic research. This collaboration ensures our platform stays at the forefront of innovation in talent assessment technology.",
-      date: "February 28, 2024",
       buttonText: "Read More",
     },
     {
       id: "update5",
-      image: "/exp_img_5.svg",
+      image: "/corp-room.png",
       title: "New MetaHuman Interview Features",
       description:
         "Introducing advanced MetaHuman capabilities including emotion recognition, natural language processing improvements, and personalized interview experiences that adapt to each candidate's communication style.",
-      date: "February 20, 2024",
       buttonText: "Read More",
     },
   ];
@@ -66,16 +61,21 @@ const RecentUpdatesSection = () => {
           >
             Recent Updates
           </h2>
-          <AnimatedButton text="View All" className="!border !border-primary !bg-transparent" />
+          <AnimatedButton text="View All" className="!border !border-primary !bg-transparent !text-xs !font-semibold !pr-2 !py-1.5" />
         </div>
 
         <SwipeableCarousel
           items={updatesData}
-          
+          cardBackground="#F2F3EE"
           autoPlayInterval={1000}
           showButton={true}
           className="w-full"
-          buttonComponent={<AnimatedButton text="Read More" className="!ml-[45%] !border !border-primary !bg-transparent" />}
+          buttonComponent={<AnimatedButton text="Read more" className="!ml-[45%] !py-1.5 !border !border-primary !bg-transparent !text-xs !font-semibold !pr-2" />}
+          descClassName="text-left"
+          titleClassName="text-left"
+          contentClassName="!p-0 !py-2"
+          imageContainerClassName="!w-[352px] !h-[280px] max-w-full"
+          hoverEffect={false}
         />
       </div>
     </section>

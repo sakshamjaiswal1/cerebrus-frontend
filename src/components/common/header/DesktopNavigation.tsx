@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import AnimatedButton from "../AnimatedButton";
 import DarkAnimatedButton from "../DarkAnimatedButton";
 import { useState, useRef, useEffect } from "react";
@@ -8,6 +8,8 @@ const DesktopNavigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 });
   const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const location = useLocation();
 
   useEffect(() => {
     if (isDropdownOpen && buttonRef.current) {
@@ -31,13 +33,13 @@ const DesktopNavigation = () => {
         </Link> */}
         <Link
           to="/about"
-          className="text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1"
+          className={`text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1 ${location.pathname === "/about" ? "text-primary-light translate-y-1" : ""}`}
         >
           About
         </Link>
         <Link
           to="/features"
-          className="text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1"
+          className={`text-base text-primary font-semibold transition-all duration-200 hover:text-primary-light hover:translate-y-1 ${location.pathname === "/features" ? "text-primary-light translate-y-1" : ""}`}
         >
           Features
         </Link>

@@ -41,10 +41,10 @@ const TeamCard = ({
 
           {/* Info Section */}
           <div className="h-1/4 p-[24px]  flex flex-col justify-center">
-            <h3 className="text-base sm:text-lg font-semibold text-primary text-center">
+            <h3 className="text-base sm:text-lg font-semibold text-primary text-left">
               {name}
             </h3>
-            <p className="text-xs sm:text-sm text-primary opacity-70 text-center mt-1">
+            <p className="text-xs sm:text-sm text-primary text-left mt-1">
               {position}
             </p>
           </div>
