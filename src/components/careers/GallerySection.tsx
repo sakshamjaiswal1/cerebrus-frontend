@@ -12,11 +12,10 @@ const GallerySection = () => {
     return (
         <section className="mb-12 sm:mb-16 lg:mb-24">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4">
-                <h2 
-                    className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-primary"
+                <h2
+                    className="text-2xl sm:text-3xl lg:text-[36px] text-primary"
                     style={{
                         fontFamily: 'Montserrat',
-                        color: '#1A323C',
                         fontStyle: 'normal',
                         fontWeight: 500,
                         lineHeight: 'normal'
@@ -37,10 +36,18 @@ const GallerySection = () => {
                 <div className="col-span-1 sm:col-span-2 lg:col-span-1">
                     <img src={images[2]} alt="Gallery image 3" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
                 </div>
-                <div className="col-span-1 sm:col-span-2 lg:col-span-2">
+                <div className="col-span-1 sm:col-span-2 lg:col-span-2 hidden max-md:block">
                     <img src={images[3]} alt="Gallery image 4" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
                 </div>
-                <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+                <div className="col-span-1 sm:col-span-2 lg:col-span-2 hidden max-md:block">
+                    <img src={images[4]} alt="Gallery image 5" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
+                </div>
+            </div>
+            <div className="max-md:hidden flex w-full gap-4 sm:gap-6 mt-4 sm:mt-6">
+                <div className="w-1/2">
+                    <img src={images[3]} alt="Gallery image 4" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
+                </div>
+                <div className="w-1/2">
                     <img src={images[4]} alt="Gallery image 5" className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-2xl" />
                 </div>
             </div>
