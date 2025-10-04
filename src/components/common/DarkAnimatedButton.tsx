@@ -1,6 +1,6 @@
-const DarkAnimatedButton = ({ text }: { text: string }) => {
+const DarkAnimatedButton = ({ text, className = '' }: { text: string, className?: string }) => {
     return (
-        <button className="group relative overflow-hidden bg-primary text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white">
+        <button className={`group relative overflow-hidden bg-primary text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:text-white ${className}`}>
             {/* Sliding background */}
             <div className="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"
                 style={{ background: 'linear-gradient(90deg, #8BD6CE 0%, #BD9AE3 100%)' }}>

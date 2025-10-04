@@ -6,7 +6,7 @@ const AlgorithmHero = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="flex flex-col items-start text-left mb-6 sm:mb-8 lg:mb-12">
           <GradientText text="The Cerebrus Intelligence Framework" />
-          <p className="text-sm sm:text-base leading-relaxed text-primary opacity-70 max-w-4xl">
+          <p className="text-sm sm:text-base leading-relaxed text-primary">
           Cerebrus is built on a stack of integrated components, each designed to replicate the depth of human evaluation but without the inconsistencies. Every layer, from the logic of mathematical models to the fluidity of Unreal Engine visuals, contributes to a platform that understands, assesses, and adapts accordingly.
           </p>
         </div>

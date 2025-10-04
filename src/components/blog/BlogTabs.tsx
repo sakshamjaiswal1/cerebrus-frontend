@@ -274,11 +274,8 @@ const BlogTabs = () => {
                 {/* Search Suggestions Popup */}
                 {isSearchFocused && (
                   <div
-                    className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden w-full sm:w-[400px]"
-                    style={{
-                      animation: 'dropdownScaleIn 0.3s ease-out forwards',
-                      transformOrigin: 'top left'
-                    }}
+                    className={"absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-lg shadow-xl z-50 overflow-hidden w-full sm:w-[400px] transition-all duration-300 ease-in-out " + (isSearchFocused ? 'opacity-100' : 'opacity-0')}
+                   
                   >
                     <div className="p-4">
                       <div className="flex flex-wrap gap-2">
@@ -294,13 +291,15 @@ const BlogTabs = () => {
                               setIsSearchFocused(false)
                               setIsSelectingSuggestion(false)
                             }}
-                            className="px-3 py-1.5 rounded-full text-xs text-gray-700 transition-all duration-200"
+                            className="px-3 py-1.5 rounded-md text-xs text-gray-700 transition-all duration-200 hover:bg-gray-200 group"
                             style={{
                               animationDelay: `${index * 0.03}s`,
                               animation: `slideInOption 0.3s ease-out ${index * 0.03}s both`
                             }}
                           >
-                            {suggestion}
+                            <span className="group-hover:bg-gradient-to-r group-hover:from-[#AA77ED] group-hover:via-[#8BD6CE] group-hover:to-[#8BD6CE] group-hover:bg-clip-text group-hover:text-transparent">
+                              {suggestion}
+                            </span>
                           </button>
                         ))}
                       </div>

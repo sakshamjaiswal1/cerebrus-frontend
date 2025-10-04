@@ -49,11 +49,11 @@ const CoreArchitecture = () => {
                   <img 
                     src={component.image} 
                     alt={component.title} 
-                    className="w-full h-16 sm:h-20 lg:h-24 rounded-lg object-contain"
+                    className="w-75 max-md:h-39 h-16 sm:h-20 lg:h-24 xl:h-50 rounded-lg object-fill"
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3 text-left">{component.title}</h3>
-                <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70 text-left">
+                <p className="text-xs sm:text-sm leading-relaxed text-primary  text-left">
                   {component.description}
                 </p>
               </div>
@@ -69,12 +69,12 @@ const CoreArchitecture = () => {
                 <img 
                   src="/algo-arc-4.svg" 
                   alt="Evaluation Algorithm" 
-                  className="w-full h-16 sm:h-20 lg:h-24 rounded-lg object-contain max-md:hidden"
+                  className="max-w-full w-164 xl:h-50 h-16 sm:h-20 lg:h-24 rounded-lg object-contain max-md:hidden"
                 />
                 <img src="/algo-eval-mob.svg" alt="Evaluation Algorithm" className="w-9/12 rounded-lg object-contain max-md:block hidden" />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3 text-left">Evaluation Algorithm</h3>
-              <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70 text-left">
+              <p className="text-xs sm:text-sm leading-relaxed text-primary  text-left">
                 At the heart of Cerebrus is an adaptive algorithm that uses AI to direct the interview by adapting to the candidate's answers in real time. It asks questions, processes responses, scores skills, and provides structured insights in real time.
               </p>
             </div>
@@ -86,11 +86,11 @@ const CoreArchitecture = () => {
                 <img 
                   src="/algo-arc-5.svg" 
                   alt="Data Security" 
-                  className="w-full h-16 sm:h-20 lg:h-24 rounded-lg object-contain"
+                  className="w-75 max-w-full h-16 sm:h-20 lg:h-24 xl:h-50 rounded-lg object-contain"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3 text-left">Data Security</h3>
-              <p className="text-xs sm:text-sm leading-relaxed text-primary opacity-70 text-left">
+              <p className="text-xs sm:text-sm leading-relaxed text-primary  text-left">
                 Enterprise-grade protocols and strict access controls ensure candidate and company data stays secure at every level.
               </p>
             </div>

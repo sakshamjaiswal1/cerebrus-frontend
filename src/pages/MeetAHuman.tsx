@@ -55,7 +55,7 @@ const MeetAHuman = () => {
           <FamiliarCustomizable />
           <WhiteCTASection />
         </main>
-        <Footer />
+        <Footer bottomClass="text-white" bottomLogo="/griphic_product_white.svg" />
       </div>
     </div>
   );

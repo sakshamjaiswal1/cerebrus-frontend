@@ -5,7 +5,12 @@ import XIcon from './icons/XIcon'
 import InstagramIcon from './icons/InstagramIcon'
 import LinkedInIcon from './icons/LinkedInIcon'
 
-const Footer = () => {
+interface FooterProps {
+  bottomClass?: string
+  bottomLogo?: string
+}
+
+const Footer = ({ bottomClass = 'text-primary', bottomLogo = "/griphic_product.svg" }: FooterProps) => {
   return (
     <footer>
       {/* Main Footer with bg-brand-bg */}
@@ -81,40 +86,40 @@ const Footer = () => {
             <div className="grid grid-cols-3 gap-4 lg:contents">
               {/* Product Section */}
               <div>
-            <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%' }}>Product</h3>
-            <nav className="flex flex-col space-y-4">
+            <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}>Product</h3>
+            <nav className="flex flex-col space-y-4 font-medium">
               <Link 
                 to="/how-to-use" 
                 className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
               >
                 Watch Demo
               </Link>
               <Link 
                 to="/our-concept" 
                 className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
               >
                 Our Concept
               </Link>
               <Link 
                 to="/algorithm" 
                 className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
               >
                 Framework
               </Link>
               <Link 
                 to="/meet-a-human" 
                 className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
               >
                 MetaHuman
               </Link>
               <Link 
                 to="/application-ui" 
                 className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
               >
                 Platform
               </Link>
@@ -123,26 +128,26 @@ const Footer = () => {
 
               {/* Resources Section */}
               <div>
-                <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%' }}>Resources</h3>
-                <nav className="flex flex-col space-y-4">
+                <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}>Resources</h3>
+                <nav className="flex flex-col space-y-4 font-medium">
                   <Link 
                     to="/how-to-use" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     Getting Started
                   </Link>
                   <Link 
                     to="/blog" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     Blog
                   </Link>
                   <Link 
                     to="/whats-new" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     What's New
                   </Link>
@@ -151,26 +156,26 @@ const Footer = () => {
 
               {/* Company Section */}
               <div>
-                <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%' }}>Company</h3>
-                <nav className="flex flex-col space-y-4">
+                <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}>Company</h3>
+                <nav className="flex flex-col space-y-4 font-medium">
                   <Link 
                     to="/about" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     About
                   </Link>
                   <Link 
                     to="/careers" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     Careers
                   </Link>
                   <Link 
                     to="/contact" 
                     className="bg-gradient-to-r hover:from-purple-400 hover:via-cyan-200 hover:to-cyan-300 from-primary to-primary/70 bg-clip-text text-transparent hover:translate-x-2 transition-all duration-300 ease-in-out text-xs sm:text-base lg:text-base"
-                    style={{ fontFamily: 'Montserrat', color: '#1A323C', lineHeight: '135%', fontWeight: 400 }}
+                    style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}
                   >
                     Contact Us
                   </Link>
@@ -182,17 +187,17 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section - Outside bg-brand-bg */}
-      <div className="py-6 text-primary">
+      <div className={`py-6 ${bottomClass}`}>
         <div className=" mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary text-sm mb-4 md:mb-0">
+            <p className="text-sm mb-4 md:mb-0">
               Copyright © 2024 Skets Griphic Pvt. Ltd.
             </p>
-            <div className="flex items-center space-x-2 text-primary text-sm">
+            <div className="flex items-center space-x-2 text-sm">
               <span>A</span>
               <img 
-                src="/griphic_product.svg" 
-                alt="Griphic" 
+                src={bottomLogo || "/griphic_product.svg"} 
+                alt="Griphic Product" 
                 className="h-6 w-auto"
               />
               <span className='font-medium text-sm'>Product</span>

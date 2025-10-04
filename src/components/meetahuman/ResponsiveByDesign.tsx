@@ -17,16 +17,17 @@ const ResponsiveByDesign = () => {
               Because our MetaHuman interviewer connects directly and responds
               to our AI engine, it naturally responds in subtle ways:
             </p>
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-1 sm:space-y-3">
               {points.map((point, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-3 sm:space-x-4 text-left"
+                  className="flex items-start gap-2 sm:gap-3 text-left justify-start"
                 >
-                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-primary rounded-full flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-primary text-[10px]">&rarr;</span>
-                    </div>
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0">
+                    <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8984 11C16.8984 15.4176 13.316 19 8.89844 19C4.48086 19 0.898438 15.4176 0.898438 11C0.898438 6.58243 4.48086 3 8.89844 3C13.316 3 16.8984 6.58243 16.8984 11ZM8.83116 8.3508L10.6688 10.1884H4.68678C4.45422 10.1884 4.26014 10.3825 4.26014 10.6151V11.3849C4.26014 11.6175 4.45182 11.8116 4.68678 11.8116H10.6688L8.83116 13.6491C8.66505 13.8153 8.66505 14.0864 8.83116 14.2525L9.37554 14.7969C9.54171 14.963 9.81478 14.9611 9.97894 14.7969L13.4136 11.3623C13.5108 11.2651 13.5504 11.1289 13.5325 11C13.5504 10.8711 13.5108 10.7349 13.4136 10.6377L9.97894 7.20302C9.81478 7.03887 9.54171 7.03691 9.37554 7.20302L8.83116 7.7474C8.66505 7.91357 8.66505 8.18463 8.83116 8.3508Z" fill="white" />
+                    </svg>
+
                   </div>
                   <p className="text-sm sm:text-base lg:text-lg text-gray-300">
                     {point}

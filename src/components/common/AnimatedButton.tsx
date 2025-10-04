@@ -4,6 +4,7 @@ interface AnimatedButtonProps {
   className?: string;
   whiteButton?: boolean;
   variant?: 'default' | 'outline';
+  arrowIcon?: React.ReactNode;
 }
 
 const AnimatedButton = ({
@@ -12,6 +13,7 @@ const AnimatedButton = ({
   className = '',
   whiteButton = false,
   variant = 'default',
+  arrowIcon,
 }: AnimatedButtonProps) => {
   const baseClasses = 'cursor-pointer group relative overflow-hidden text-primary text-sm font-medium transition-all duration-300 hover:text-white';
   const variantClasses = variant === 'outline' 
@@ -39,6 +41,7 @@ const AnimatedButton = ({
           {/* Arrow icon with rotation - transparent arrow with colored background */}
           <div className="w-5 h-5 sm:w-6 sm:h-6 bg-primary group-hover:bg-white rounded-full flex items-center justify-center transition-colors duration-300 relative overflow-hidden flex-shrink-0">
             {/* Transparent arrow cutout */}
+            {arrowIcon ? arrowIcon : (
             <div
               className="absolute inset-0 transform group-hover:rotate-[45deg] transition-transform duration-300 top-0 bottom-1"
               style={{
@@ -53,6 +56,7 @@ const AnimatedButton = ({
                 mixBlendMode: "difference",
               }}
             />
+            )}
           </div>
         </div>
       )}
