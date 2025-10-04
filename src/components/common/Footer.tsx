@@ -154,7 +154,7 @@ const Footer = ({ bottomClass = 'text-primary', bottomLogo = "/griphic_product.s
                 </nav>
               </div>
 
-              {/* Company Section */}
+            {/* Company Section */}
               <div>
                 <h3 className="text-primary font-bold text-xs sm:text-lg lg:text-lg mb-6" style={{ fontFamily: 'Montserrat',  lineHeight: '135%' }}>Company</h3>
                 <nav className="flex flex-col space-y-4 font-medium">

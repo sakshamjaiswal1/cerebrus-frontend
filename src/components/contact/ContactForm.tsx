@@ -1,12 +1,12 @@
 const ContactForm = () => {
   return (
-    <section className="w-full py-8 sm:py-12 lg:py-16">
+  <section className="w-full py-4 sm:py-8 lg:py-12">
       <div className="mx-auto px-4 sm:px-6 lg:px-0">
         <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg">
           <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-12">
             
             {/* Left Side - Map and Company Info */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 bg-[#F2F3EE] rounded-2xl p-4 sm:p-6 lg:p-8">
               {/* Google Map */}
               <div className="mb-6 sm:mb-8">
                 <iframe
@@ -28,19 +28,19 @@ const ContactForm = () => {
                 <div className="space-y-3 sm:space-y-4">
                   <div>
                     <h4 className="text-xs sm:text-sm font-medium text-primary mb-1">Address</h4>
-                    <p className="text-xs sm:text-sm text-primary opacity-70">
+                    <p className="text-xs sm:text-sm text-primary ">
                       226, Patparganj Industrial Area, Patparganj, Delhi, 110092
                     </p>
                   </div>
                   
                   <div>
                     <h4 className="text-xs sm:text-sm font-medium text-primary mb-1">Phone number</h4>
-                    <p className="text-xs sm:text-sm text-primary opacity-70">+91-7300590668</p>
+                    <p className="text-xs sm:text-sm text-primary ">+91-7300590668</p>
                   </div>
                   
                   <div>
                     <h4 className="text-xs sm:text-sm font-medium text-primary mb-1">Email ID</h4>
-                    <p className="text-xs sm:text-sm text-primary opacity-70">info@griphic.com</p>
+                    <p className="text-xs sm:text-sm text-primary ">info@griphic.com</p>
                   </div>
                 </div>
               </div>
@@ -55,14 +55,14 @@ const ContactForm = () => {
                     <input
                       type="text"
                       placeholder="First name"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary font-medium placeholder-[#CACCC2] focus:outline-none focus:ring-2 focus:ring-primary h-15"
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="Last name"
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary font-medium placeholder-[#CACCC2] focus:outline-none focus:ring-2 focus:ring-primary h-15"
                     />
                   </div>
                 </div>
@@ -72,14 +72,14 @@ const ContactForm = () => {
                   <input
                     type="email"
                     placeholder="Organization email id"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary font-medium placeholder-[#CACCC2] focus:outline-none focus:ring-2 focus:ring-primary h-15"
                   />
                 </div>
                 
                 {/* Phone Number */}
                 <div>
                   <div className="flex">
-                    <select className="px-2 sm:px-3 py-2 sm:py-3 bg-gray-100 border-0 rounded-l-lg text-xs sm:text-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary">
+                    <select className="px-2 sm:px-3 py-2 sm:py-3 bg-gray-100 border-0 rounded-l-lg text-xs sm:text-sm text-primary focus:outline-none focus:ring-2 focus:ring-primary h-15">
                       <option>+91</option>
                       <option>+1</option>
                       <option>+44</option>
@@ -87,7 +87,7 @@ const ContactForm = () => {
                     <input
                       type="tel"
                       placeholder="Phone number"
-                      className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-r-lg text-xs sm:text-sm text-primary placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-r-lg text-xs sm:text-sm text-primary font-medium placeholder-[#CACCC2] focus:outline-none focus:ring-2 focus:ring-primary h-15"
                     />
                   </div>
                 </div>
@@ -96,8 +96,8 @@ const ContactForm = () => {
                 <div>
                   <textarea
                     placeholder="How can we help ?"
-                    rows={4}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    rows={10}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-100 border-0 rounded-lg text-xs sm:text-sm text-primary font-medium placeholder-[#CACCC2] focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   ></textarea>
                 </div>
                 

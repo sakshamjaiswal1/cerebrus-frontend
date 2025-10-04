@@ -18,12 +18,12 @@ const FeatureSection = ({ title, description, features, image, imageAlt }: Featu
         <div className="flex flex-col lg:flex-row gap-8 sm:gap-10 lg:gap-12 items-center">
 
           {/* Left Side - Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-5/12">
             <h2 className="text-2xl sm:text-3xl font-semibold text-primary mb-4 sm:mb-6 leading-tight">
               {title}
             </h2>
 
-            <p className="text-sm sm:text-base text-primary opacity-70 leading-relaxed mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base lg:text-xl text-primary leading-relaxed mb-6 sm:mb-8">
               {description}
             </p>
 
@@ -36,8 +36,8 @@ const FeatureSection = ({ title, description, features, image, imageAlt }: Featu
                   </svg>
 
                   <div>
-                    <p className="text-xs sm:text-lg text-primary">
-                      <span className="font-semibold">{feature.title}:</span> <span className="opacity-70">{feature.description}</span>
+                    <p className="text-xs sm:text-lg lg:text-xl text-primary">
+                      <span className="font-semibold">{feature.title}:</span> <span>{feature.description}</span>
                     </p>
                   </div>
                 </div>
@@ -46,7 +46,7 @@ const FeatureSection = ({ title, description, features, image, imageAlt }: Featu
           </div>
 
           {/* Right Side - Image */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-7/12">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={image}

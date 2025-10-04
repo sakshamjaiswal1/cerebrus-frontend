@@ -99,7 +99,7 @@ function ApplicationUI() {
     {
       title: "Integrated Chat",
       description:
-        "Enable internal communication through comments and feedback.",
+        "Enables private internal communication through comments and feedback.",
       features: [
         {
           title: "Timeline View",
@@ -123,7 +123,7 @@ function ApplicationUI() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#F7F7F7]">
       <div className="max-w-[1440px] mx-auto">
         <Helmet>
           <title>
