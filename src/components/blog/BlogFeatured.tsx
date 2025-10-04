@@ -37,13 +37,13 @@ const BlogFeatured = () => {
                 ].map((item, index) => (
                   <div key={index} className="border-b border-b-primary pb-4 sm:pb-6 last:border-b-0">
                     <div className="py-4 border border-transparent hover:border-gray-300 hover:border hover:bg-brand-bg rounded-2xl hover:px-4 transition-all duration-300">
-                      <h4 className="text-base sm:text-2xl lg:text-4xl font-medium text-primary mb-2 leading-tight">
+                      <h4 className="text-base sm:text-2xl lg:text-3xl font-medium text-primary mb-2 leading-tight">
                         {item.title}
                       </h4>
 
                       <div className="flex flex-row items-center justify-start gap-2">
                         <div className="flex items-center gap-3">
-                          <AnimatedButton text="Read more" className="!border !border-primary !bg-transparent !text-primary !px-2 !py-1 !text-xs sm:!px-4 sm:!py-2 sm:!text-sm" />
+                          <AnimatedButton text="Read more" className="!border !border-primary !bg-transparent !text-primary !px-2 !py-1 !text-xs sm:!px-4 sm:!py-2 sm:!text-sm !font-semibold" />
                           <span className="text-xs text-primary font-semibold">{item.category}</span>
                         </div>
                         <span className="text-xs font-semibold text-primary opacity-95">{item.date}</span>

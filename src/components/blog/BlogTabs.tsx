@@ -4,9 +4,11 @@ import AnimatedButton from "../common/AnimatedButton"
 const BlogTabs = () => {
   const [activeTab, setActiveTab] = useState("blogs")
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isDropdownClosing, setIsDropdownClosing] = useState(false)
   const [selectedSort, setSelectedSort] = useState("Published Date (latest to oldest)")
   const [searchQuery, setSearchQuery] = useState("")
   const [isSearchFocused, setIsSearchFocused] = useState(false)
+  const [isSelectingSuggestion, setIsSelectingSuggestion] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const searchRef = useRef<HTMLDivElement>(null)
 
@@ -25,6 +27,7 @@ const BlogTabs = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsSearchFocused(false)
+        setIsSelectingSuggestion(false)
       }
     }
 
@@ -44,7 +47,7 @@ const BlogTabs = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false)
+        handleCloseDropdown()
       }
     }
 
@@ -53,6 +56,14 @@ const BlogTabs = () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+
+  const handleCloseDropdown = () => {
+    setIsDropdownClosing(true)
+    setTimeout(() => {
+      setIsDropdownOpen(false)
+      setIsDropdownClosing(false)
+    }, 300) // Match animation duration
+  }
 
   const blogItems = [
     {
@@ -166,8 +177,8 @@ const BlogTabs = () => {
               {/* Sort by Dropdown */}
               <div className="relative flex-shrink-0" ref={dropdownRef}>
                 <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-gray-300 rounded-full text-xs sm:text-sm font-medium text-gray-700 hover:border-gray-400 transition-all duration-200"
+                  onClick={() => isDropdownOpen ? handleCloseDropdown() : setIsDropdownOpen(true)}
+                  className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border-2 border-gray-300 rounded-full text-xs sm:text-sm font-medium text-gray-700 hover:border-gray-400 transition-all duration-200 h-10"
                 >
                   <span className="hidden sm:inline">Sort by</span>
                   <span className="sm:hidden">Sort</span>
@@ -194,28 +205,28 @@ const BlogTabs = () => {
                   <div
                     className="absolute top-0 right-0 w-80 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden"
                     style={{
-                      animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+                      animation: isDropdownClosing ? 'dropdownScaleOut 0.3s ease-in forwards' : 'dropdownScaleIn 0.3s ease-out forwards',
                       transformOrigin: 'top right'
                     }}
                   >
                     <div className="p-2">
                       {sortOptions.map((option, index) => (
-                        <div 
-                        className="hover:bg-brand-bg cursor-pointer hover:px-2 transition-all duration-300 rounded-xl" key={index}
+                        <div
+                          className="hover:bg-brand-bg cursor-pointer hover:px-2 transition-all duration-300 rounded-xl" key={index}
                         >
                           <button
                             key={index}
                             onClick={() => {
                               setSelectedSort(option)
-                              setIsDropdownOpen(false)
+                              handleCloseDropdown()
                             }}
                             className={`w-full px-4 py-3 text-left text-sm cursor-pointer transition-all duration-200 rounded-xl ${selectedSort === option
-                              ? "bg-black bg-clip-text text-transparent font-medium"
-                              : "text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent"
+                              ? "text-black font-semibold hover:bg-gradient-to-r hover:from-[#AA77ED] hover:via-[#8BD6CE] hover:to-[#8BD6CE] hover:bg-clip-text hover:text-transparent"
+                              : "text-gray-700 hover:bg-gradient-to-r hover:from-[#AA77ED] hover:via-[#8BD6CE] hover:to-[#8BD6CE] hover:bg-clip-text hover:text-transparent font-medium"
                               }`}
                             style={{
                               animationDelay: `${index * 0.05}s`,
-                              animation: `slideInOption 0.3s ease-out ${index * 0.05}s both`
+                              animation: isDropdownClosing ? `slideOutOption 0.3s ease-in ${index * 0.02}s both` : `slideInOption 0.3s ease-out ${index * 0.05}s both`
                             }}
                           >
                             {option}
@@ -229,13 +240,27 @@ const BlogTabs = () => {
 
               {/* Search Input - Hidden on mobile, shown on desktop grouped with sort */}
               <div className="relative hidden sm:block w-full sm:w-max" ref={searchRef}>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => {
+                    if (!isSelectingSuggestion && !searchQuery) {
+                      setIsSearchFocused(false)
+                    }
+                  }}
+                  className={`pl-4 pr-12 py-2.5 border-2 border-gray-200 rounded-full text-sm placeholder-gray-300 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full sm:w-[123px] h-10 ${isSearchFocused && window.innerWidth >= 640 ? 'sm:w-[400px]' : ''
+                    }`}
+                />
                 <svg
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-300"
                 >
                   <path
                     d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
@@ -245,24 +270,13 @@ const BlogTabs = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onFocus={() => setIsSearchFocused(true)}
-                  onBlur={() => !searchQuery && setIsSearchFocused(false)}
-                  className={`pl-12 py-2.5 border-2 border-gray-300 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full sm:w-[200px] ${
-                    isSearchFocused && window.innerWidth >= 640 ? 'sm:w-[400px]' : ''
-                  }`}
-                />
 
                 {/* Search Suggestions Popup */}
                 {isSearchFocused && (
-                  <div 
+                  <div
                     className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden w-full sm:w-[400px]"
                     style={{
-                      animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+                      animation: 'dropdownScaleIn 0.3s ease-out forwards',
                       transformOrigin: 'top left'
                     }}
                   >
@@ -271,11 +285,16 @@ const BlogTabs = () => {
                         {searchSuggestions.map((suggestion, index) => (
                           <button
                             key={index}
+                            onMouseDown={(e) => {
+                              e.preventDefault()
+                              setIsSelectingSuggestion(true)
+                            }}
                             onClick={() => {
                               setSearchQuery(suggestion)
                               setIsSearchFocused(false)
+                              setIsSelectingSuggestion(false)
                             }}
-                            className="px-3 py-1.5 rounded-full text-xs text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent transition-all duration-200"
+                            className="px-3 py-1.5 rounded-full text-xs text-gray-700 transition-all duration-200"
                             style={{
                               animationDelay: `${index * 0.03}s`,
                               animation: `slideInOption 0.3s ease-out ${index * 0.03}s both`
@@ -301,7 +320,7 @@ const BlogTabs = () => {
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-300"
               >
                 <path
                   d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
@@ -317,16 +336,20 @@ const BlogTabs = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => setIsSearchFocused(true)}
-                onBlur={() => !searchQuery && setIsSearchFocused(false)}
-                className="pl-12 py-2.5 border-2 border-gray-300 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full"
+                onBlur={() => {
+                  if (!isSelectingSuggestion && !searchQuery) {
+                    setIsSearchFocused(false)
+                  }
+                }}
+                className="px-4 py-2.5 border-2 border-gray-200 rounded-full text-sm placeholder-gray-300 focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out w-full"
               />
 
               {/* Search Suggestions Popup for Mobile */}
               {isSearchFocused && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 bg-white border-2 border-gray-200 rounded-2xl shadow-xl z-50 overflow-hidden w-full"
                   style={{
-                    animation: 'wobblyScale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+                    animation: 'dropdownScaleIn 0.3s ease-out forwards',
                     transformOrigin: 'top left'
                   }}
                 >
@@ -335,9 +358,14 @@ const BlogTabs = () => {
                       {searchSuggestions.map((suggestion, index) => (
                         <button
                           key={index}
+                          onMouseDown={(e) => {
+                            e.preventDefault()
+                            setIsSelectingSuggestion(true)
+                          }}
                           onClick={() => {
                             setSearchQuery(suggestion)
                             setIsSearchFocused(false)
+                            setIsSelectingSuggestion(false)
                           }}
                           className="px-3 py-1.5 rounded-full text-xs text-gray-700 hover:bg-gradient-to-r hover:from-[#c718b9] hover:via-[#A5F5ED] hover:to-[#A5F5ED] hover:bg-clip-text hover:text-transparent transition-all duration-200"
                           style={{
