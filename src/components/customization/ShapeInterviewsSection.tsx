@@ -27,7 +27,7 @@ const ShapeInterviewsSection = () => {
                 </video>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-medium text-primary mb-2">
+                <h3 className="text-lg text-primary mb-2 font-semibold">
                   Tailor type of interview questions to prioritize what matters to you the most.
                 </h3>
               </div>
@@ -49,7 +49,7 @@ const ShapeInterviewsSection = () => {
                 </video>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-medium text-primary mb-2">
+                <h3 className="text-lg font-semibold text-primary mb-2">
                   Craft the perfect blend of skills to define your interviewing ideology.
                 </h3>
               </div>

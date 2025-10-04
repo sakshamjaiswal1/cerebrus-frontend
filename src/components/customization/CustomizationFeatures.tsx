@@ -10,7 +10,7 @@ const CustomizationFeatures = () => {
   return (
     <section className="w-full">
       <div className="mx-auto">
-        <div className="space-y-6">
+        <div className="space-y-3">
           {features.map((feature, index) => (
             <div key={index} className="flex items-center space-x-4">
               <div className="flex-shrink-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -18,13 +18,13 @@ const CustomizationFeatures = () => {
                   <path d="M20 6L9 17L4 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <p className="text-base text-primary">{feature}</p>
+              <p className="text-base lg:text-xl text-primary">{feature}</p>
             </div>
           ))}
         </div>
         
         <div className="mt-8">
-          <p className="text-base text-primary opacity-70 italic">
+          <p className="text-base text-primary lg:text-xl">
             It's your hiring process. We just make it easier to shape.
           </p>
         </div>

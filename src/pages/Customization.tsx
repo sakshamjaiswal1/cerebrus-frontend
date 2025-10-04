@@ -10,7 +10,7 @@ import SkillBasedTuning from "../components/customization/SkillBasedTuning";
 
 function Customization() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#F7F7F7]">
       <div className="max-w-[1440px] mx-auto">
         <Helmet>
           <title>

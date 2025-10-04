@@ -4,12 +4,12 @@ const CustomizationQuote = () => {
       <div className="mx-auto">
         <div className="text-center relative">
           {/* Left Quote marks */}
-          <div className="absolute -top-10 left-8 z-30 bg-white pr-10 max-md:-top-5 max-md:left-0">
+          <div className="absolute -top-10 left-8 z-30 bg-[#F7F7F7] pr-10 max-md:-top-5 max-md:left-0">
             <img src="/quote.svg" alt="Quote Left" className="max-md:w-10 object-contain" />
           </div>
 
           {/* Right Quote marks */}
-          <div className="absolute -bottom-10 right-8 z-30 rotate-180 bg-white pr-10 max-md:-bottom-5 max-md:right-0">
+          <div className="absolute -bottom-10 right-8 z-30 rotate-180 bg-[#F7F7F7] pr-10 max-md:-bottom-5 max-md:right-0">
             <img src="/quote.svg" alt="Quote Right" className="max-md:w-10 object-contain" />
           </div>
 
